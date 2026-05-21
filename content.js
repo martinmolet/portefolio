@@ -421,7 +421,7 @@ const CONTENT = {
           role: 'Consultant Design System Manager',
           period: 'Mars 2024 — Sept. 2025',
           summary: 'Refonte et unification des librairies Figma pour la banque retail — une source unique pour le client et le conseiller.',
-          context: 'Deux design systems en parallèle — un pour l\'app client, un pour l\'outillage conseiller. La dérive s\'accumulait. Les designers passaient plus de temps à se recaler sur les specs qu\'à concevoir. Les devs reconstruisaient des composants au lieu de les réutiliser.',
+          context: 'Deux design systems en parallèle : un pour l\'app client, un pour l\'outillage conseiller. La dérive s\'accumulait. Les designers passaient plus de temps à se recaler sur les specs qu\'à concevoir. Les devs reconstruisaient des composants au lieu de les réutiliser.',
           problem: 'Pas de contrat partagé. Des librairies dupliquées, difficiles à naviguer et à maintenir. Une adoption inégale selon les équipes. Aucune gouvernance documentée.',
           action: [
             'Réorganisation des librairies Figma — classement alphabétique aligné sur Storybook',
@@ -470,7 +470,7 @@ const CONTENT = {
           context: 'Une app mobile gaming avec une librairie Figma morcelée. Les variantes étaient maintenues à la main. Aucun contrat de thème. Le même composant existait en plusieurs versions légèrement différentes selon les écrans.',
           problem: 'Designers et développeurs ralentis. La cohérence visuelle était aléatoire. Impossible de livrer le light/dark sans base tokenisée.',
           action: [
-            'Concevoir et améliorer les parcours en parallèle du travail système',
+            'Concevoir et améliorer les parcours en parallèle du DS',
             'Prendre en main le design system mobile — d\'abord designer, puis référent',
             'Refonte complète de la librairie Figma — variantes automatisées, tokens, switch light/dark',
             'Tenir la cohérence graphique sur l\'ensemble de l\'app et outiller le workflow design + dev',
@@ -479,8 +479,8 @@ const CONTENT = {
           result: [
             { k: '1', s: '', v: 'Mode light/dark piloté par tokens livré en production' },
             { k: '100', s: '%', v: 'Variantes automatisées, zéro maintenance manuelle' },
-            { k: '17', s: ' mois', v: 'Mission, dont le rôle de référent système' },
-            { k: '1', s: '', v: 'Librairie unique — une source pour toute l\'app' },
+            { k: '17', s: ' mois', v: 'Mission, dont le rôle de référent DS' },
+            { k: '1', s: '', v: 'Librairie unique : une source pour toute l\'app' },
           ],
         },
       ],
@@ -505,8 +505,8 @@ const CONTENT = {
           period: 'Mars 2024 — Sept. 2025',
           location: 'Paris · Remote',
           impact: [
-            'Restructuration des librairies Figma — lisibilité, maintenabilité, adoption',
-            'Fusion des systèmes client + conseiller en une librairie avec modes dédiés',
+            'Restructuration des librairies Figma : lisibilité, maintenabilité, adoption',
+            'Fusion des librairies client + conseiller en une librairie avec modes dédiés',
             '40+ designers formés via ateliers, open hours et guides écrits',
           ],
         },
@@ -527,7 +527,7 @@ const CONTENT = {
           location: 'Paris',
           impact: [
             'En charge du design system mobile — d\'abord designer, puis référent',
-            'Refonte Figma — variantes automatisées, tokens, switch light/dark',
+            'Refonte Figma : variantes automatisées, tokens, switch light/dark',
             'Cohérence graphique tenue sur l\'app, workflow design + dev outillé',
           ],
         },
@@ -549,7 +549,7 @@ const CONTENT = {
           location: 'Paris',
           impact: [
             'Refonte complète de la librairie Figma de zéro',
-            'Cohérence graphique tenue sur l\'ensemble des écrans, workflow design + dev outillé',
+            'Cohérence graphique tenue sur l\'ensemble des écrans, workflow design + dev',
           ],
         },
         {
