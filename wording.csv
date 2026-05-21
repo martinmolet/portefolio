@@ -1,0 +1,121 @@
+Clé;Contexte;EN;FR
+HOME;;;
+home.title;Titre hero (\ n = saut de ligne);"I build the systems\nthat let design teams\nship faster.";"Je construis les\nsystèmes qui font\nlivrer les équipes design."
+home.sub;Sous-titre hero;"8+ years as a Product Designer, focused on design systems and design ops. From e-commerce to retail banking, I leave teams with a way of working, not just components.";"8 ans de Product Design, spécialisé en design system et design ops. De l'e-commerce à la banque retail, je transmets aux équipes une façon de travailler, pas seulement des composants."
+home.cta1;Bouton principal;See case studies;Voir les études
+home.cta2;Bouton secondaire;Get in touch;Me contacter
+home.metric1.label;Compteur 1 — label;Designers trained on the Société Générale system;Designers formés sur le système Société Générale
+home.metric1.note;Compteur 1 — note;"Workshops, open hours, tutorials and written guides. Adoption, not push.";"Ateliers, open hours, tutoriels et guides écrits. De l'adoption, pas de l'imposition."
+home.metric2.label;Compteur 2 — label;Design systems unified into a single library;Design systems fusionnés en une seule librairie
+home.metric2.note;Compteur 2 — note;"Client + advisor systems merged, with dedicated modes. Less duplication, fewer drifts.";"Systèmes client + conseiller réunis, avec des modes dédiés. Moins de doublons, moins de dérive."
+home.metric3.label;Compteur 3 — label;Years shipping production design systems;Ans à livrer des systèmes en production
+home.metric3.note;Compteur 3 — note;"7 e-commerce sites, retail banking, mobile gaming, telecom subscriptions.";"7 sites e-commerce, banque retail, mobile gaming, souscription telecom."
+WORK — DESIGN SYSTEM;;;
+work.ds.oneLiner;Accroche pratique DS;A library is not a system. The system is the contract.;"Une librairie, ce n'est pas un système. Le système, c'est le contrat."
+work.ds.method.1;Méthode DS — étape 1;"Audit the existing libraries: components, tokens, drift, debt";"Auditer les librairies existantes : composants, tokens, dérives, dette"
+work.ds.method.2;Méthode DS — étape 2;"Define the contract: naming, structure, governance";"Définir le contrat : nommage, structure, gouvernance"
+work.ds.method.3;Méthode DS — étape 3;"Tokenize from the bottom up: primitives → semantic → component";"Tokeniser par le bas : primitives → sémantique → composant"
+work.ds.method.4;Méthode DS — étape 4;Migrate in waves, never in big bangs;"Migrer par vagues, jamais d'un seul bloc"
+work.ds.method.5;Méthode DS — étape 5;Measure adoption, not output;"Mesurer l'adoption, pas la production"
+work.ds.proof.1.k;Preuve DS 1 — label;Figma rebuild;Refonte Figma
+work.ds.proof.1.v;Preuve DS 1 — texte;"Société Générale libraries restructured for readability, maintainability and adoption.";"Librairies Société Générale restructurées pour la lisibilité, la maintenabilité et l'adoption."
+work.ds.proof.2.k;Preuve DS 2 — label;Variables & tokens;Variables & tokens
+work.ds.proof.2.v;Preuve DS 2 — texte;"Desktop / mobile variants automated. Manual errors collapsed to near-zero.";"Déclinaisons desktop / mobile automatisées. Les erreurs manuelles tombent à zéro."
+work.ds.proof.3.k;Preuve DS 3 — label;2 → 1 systems;2 → 1 système
+work.ds.proof.3.v;Preuve DS 3 — texte;Client and advisor systems unified into one library with dedicated modes.;Systèmes client et conseiller réunis en une seule librairie avec modes dédiés.
+WORK — DESIGN OPS;;;
+work.ops.oneLiner;Accroche pratique Ops;Make the right thing the easy thing.;Le bon chemin doit être le chemin naturel.
+work.ops.method.1;Méthode Ops — étape 1;Map the design lifecycle end-to-end;Cartographier le cycle design de bout en bout
+work.ops.method.2;Méthode Ops — étape 2;"Find the friction: handoffs, reviews, naming, files";"Repérer les frictions : handoffs, revues, nommage, fichiers"
+work.ops.method.3;Méthode Ops — étape 3;"Standardize what should be standard, free what shouldn't";"Standardiser ce qui doit l'être, laisser de la liberté sur le reste"
+work.ops.method.4;Méthode Ops — étape 4;Document usage, rules and constraints for designers and devs;Documenter usages, règles et contraintes pour designers et devs
+work.ops.method.5;Méthode Ops — étape 5;Run open hours so the system stays a living conversation;Animer des open hours pour que le système reste une conversation vivante
+work.ops.proof.1.k;Preuve Ops 1 — label;Operational docs;Documentation opérationnelle
+work.ops.proof.1.v;Preuve Ops 1 — texte;"Components documented with usage, rules and constraints, for designers and devs.";"Composants documentés avec usages, règles et contraintes, accessibles aux designers et aux développeurs."
+work.ops.proof.2.k;Preuve Ops 2 — label;Workflow automation;Automatisation des workflows
+work.ops.proof.2.v;Preuve Ops 2 — texte;"Sketch → Figma migration at Orange, with a brand-new UI Kit.";"Migration Sketch → Figma chez Orange, avec un UI Kit entièrement refait."
+work.ops.proof.3.k;Preuve Ops 3 — label;Multi-mode theming;Theming multi-modes
+work.ops.proof.3.v;Preuve Ops 3 — texte;Light / dark switch shipped on the FDJ mobile app, driven by tokens.;Switch light / dark livré sur l'app mobile FDJ, piloté par tokens.
+WORK — DESIGN AI;;;
+work.ai.oneLiner;Accroche pratique AI;No hype. Just leverage where the system already exists.;Pas de hype. Du levier là où le système existe déjà.
+work.ai.method.1;Méthode AI — étape 1;Use the design system as the AI's grammar;Utiliser le design system comme grammaire de l'IA
+work.ai.method.2;Méthode AI — étape 2;"Automate the boring: docs, alt-text, changelogs";"Automatiser ce qui est répétitif : docs, alt-text, changelogs"
+work.ai.method.3;Méthode AI — étape 3;"Augment review: flag drift, suggest tokens";"Outiller le review : détecter les dérives, proposer des tokens"
+work.ai.method.4;Méthode AI — étape 4;Keep humans in every creative loop;Garder l'humain dans chaque boucle créative
+work.ai.proof.1.k;Preuve AI 1 — label;Auto-documentation;Auto-documentation
+work.ai.proof.1.v;Preuve AI 1 — texte;"Component props → MDX docs + usage examples, generated on each merge.";"Props → MDX + exemples d'usage, générés à chaque merge."
+work.ai.proof.2.k;Preuve AI 2 — label;Design assistant;Assistant design
+work.ai.proof.2.v;Preuve AI 2 — texte;In-Figma helper that maps freeform layers to existing tokens.;Helper Figma qui associe les calques libres aux tokens existants.
+work.ai.proof.3.k;Preuve AI 3 — label;System acceleration;Génération accélérée
+work.ai.proof.3.v;Preuve AI 3 — texte;"New screens built from a brief in minutes, not hours.";"Des écrans complets à partir d'un brief, en quelques minutes au lieu de quelques heures."
+WORK — TRANSMISSION;;;
+work.teach.oneLiner;Accroche pratique Transmission;A system spreads through people, not files.;"Un système se transmet par les gens, pas par les fichiers."
+work.teach.method.1;Méthode — étape 1;"Workshops scoped by role, not seniority";"Workshops calés sur le rôle, pas sur le niveau"
+work.teach.method.2;Méthode — étape 2;1:1 mentoring on real product work;Mentorat 1:1 sur du vrai produit
+work.teach.method.3;Méthode — étape 3;Public office hours for any designer;Open hours ouvertes à tous les designers
+work.teach.method.4;Méthode — étape 4;"Document the why, not just the how";"Documenter le pourquoi, pas seulement le comment"
+work.teach.proof.1.k;Preuve Transmission 1 — label;ECV Aix-en-Provence;ECV Aix-en-Provence
+work.teach.proof.1.v;Preuve Transmission 1 — texte;"Speaker session for M1 students on Atomic Design, variables, tokens, documentation and theming.";"Atelier M1 sur l'Atomic Design, les variables, les tokens, la documentation et le theming."
+work.teach.proof.2.k;Preuve Transmission 2 — label;40+ designers trained;40+ designers formés
+work.teach.proof.2.v;Preuve Transmission 2 — texte;"Workshops, open hours, tutorials and guides at Société Générale.";"Ateliers, open hours, tutoriels et guides écrits chez Société Générale."
+work.teach.proof.3.k;Preuve Transmission 3 — label;Exercise: rebuild a component;Exercice fil rouge
+work.teach.proof.3.v;Preuve Transmission 3 — texte;"Take a legacy button, return a token-driven, accessible, themed one.";"Reprendre un bouton legacy et le rendre token-driven, accessible, thémé."
+CASE — SOCIÉTÉ GÉNÉRALE;;;
+cases.sg.summary;Résumé carte SG;"Rebuilt and unified the Figma libraries for retail banking, one source for client and advisor surfaces.";"Refonte et unification des librairies Figma pour la banque retail, une source unique pour le client et le conseiller."
+cases.sg.context;Contexte SG;"Two parallel design systems: one for the client app, one for the advisor tooling. Drift was compounding. Designers spent more time aligning to spec than designing. Devs were rebuilding instead of reusing.";"Deux design systems en parallèle : un pour l'app client, un pour l'outillage conseiller. La dérive s'accumulait. Les designers passaient plus de temps à se recaler sur les specs qu'à concevoir. Les devs reconstruisaient des composants au lieu de les réutiliser."
+cases.sg.problem;Problème SG;"No shared contract. Libraries were duplicated, hard to navigate, hard to maintain. Adoption was uneven. No documented governance.";"Pas de contrat partagé. Des librairies dupliquées, difficiles à naviguer et à maintenir. Une adoption inégale selon les équipes. Aucune gouvernance documentée."
+cases.sg.action.1;Action SG 1;Restructured both Figma libraries for readability, maintainability and adoption;Réorganisation des librairies Figma avec classement alphabétique aligné sur Storybook
+cases.sg.action.2;Action SG 2;Set up variables and tokens to automate desktop / mobile variants;"280+ tokens de taille et 230+ tokens de couleur, une librairie avec plusieurs modes"
+cases.sg.action.3;Action SG 3;Unified client + advisor systems into a single library with dedicated modes;Fusion des systèmes client + conseiller en une seule librairie thématisée
+cases.sg.action.4;Action SG 4;Wrote operational documentation covering usage, rules and constraints for designers and devs;Refonte de 185+ composants et reconstruction de 300+ icônes avec slots, variables et variants rationalisés
+cases.sg.action.5;Action SG 5;"Trained 40+ designers via workshops, open hours, tutorials and guides";Formation de 40+ designers via ateliers, open hours, tutoriels et guides écrits
+cases.sg.result.1.v;Résultat SG 1;Designers trained on the new system;Designers formés au nouveau système
+cases.sg.result.2.v;Résultat SG 2;Design systems unified;Tokens de taille, source unique de vérité
+cases.sg.result.3.v;Résultat SG 3;Manual desktop/mobile drift remaining;Tokens de couleur sur deux modes thématisés
+cases.sg.result.4.v;Résultat SG 4;"Mission length, four releases shipped";Déclinaison d'écrans plus rapide
+CASE — ECV;;;
+cases.ecv.summary;Résumé carte ECV;Two yearly workshops with Master 1 students on building and documenting a Design System.;Deux ateliers annuels avec des étudiants en Master 1 sur la conception et la documentation d'un Design System.
+cases.ecv.context;Contexte ECV;"A hands-on workshop for M1 students at ECV Aix-en-Provence. Two consecutive years, 8 students in the first cohort and 6 in the second. The brief: learn to think in systems, not just in UI.";"Atelier hands-on pour les M1 de l'ECV Aix-en-Provence. Deux années consécutives, 8 étudiants la première promo et 6 la deuxième. L'objectif : apprendre à penser système, pas seulement UI."
+cases.ecv.problem;Problème ECV;"Students arrive with strong UI instincts but few mental models for systems thinking. Atomic Design, tokens, theming, documentation: the concepts are there, but the practice is missing.";"Les étudiants arrivent avec un bon instinct UI mais peu de modèles mentaux pour penser système. Atomic Design, tokens, theming, documentation : les concepts existent, mais la pratique manque."
+cases.ecv.action.1;Action ECV 1;"Covered the fundamentals: Atomic Design, variables, design tokens, documentation and theming";"Partagé les fondamentaux : Atomic Design, variables, design tokens, documentation et theming"
+cases.ecv.action.2;Action ECV 2;"Hands-on exercises from day one: build it, name it, document it";"Exercices pratiques dès le premier jour : construire, nommer, documenter"
+cases.ecv.action.3;Action ECV 3;"Worked the modularity angle: why a component that can't be combined is just a shape";"Travaillé la modularité : pourquoi un composant qui ne se combine pas est juste une forme"
+cases.ecv.action.4;Action ECV 4;"Each student wrote complete documentation for one component: usage, rules, constraints";"Chaque étudiant a rédigé une documentation complète pour un composant : usages, règles, contraintes"
+cases.ecv.action.5;Action ECV 5;"Mixed open discussion with structured critique, with students reviewing each other's systems";"Mélange d'échanges ouverts et de critique structurée, les étudiants ont reviewé les systèmes des autres"
+cases.ecv.result.1.v;Résultat ECV 1;"Consecutive years, two cohorts";"Années consécutives, deux promotions"
+cases.ecv.result.2.v;Résultat ECV 2;M1 students trained end-to-end;Étudiants M1 formés de bout en bout
+cases.ecv.result.3.v;Résultat ECV 3;Documented design systems shipped by students;Design systems documentés livrés par les étudiants
+cases.ecv.result.4.v;Résultat ECV 4;Half-day workshop format, repeatable;"Format demi-journée, reproductible"
+CASE — FDJ;;;
+cases.fdj.summary;Résumé carte FDJ;"Owned the mobile design system end-to-end, from contributor to referent, and shipped a token-driven light/dark mode.";"Prise en main du design system mobile de bout en bout, de contributeur à référent, avec un mode light/dark piloté par tokens."
+cases.fdj.context;Contexte FDJ;"A mobile gaming app with a fragmented Figma library. Variants were maintained by hand. No theming contract. The same component existed in subtly different versions across screens.";"Une app mobile gaming avec une librairie Figma morcelée. Les variantes étaient maintenues à la main. Aucun contrat de thème. Le même composant existait en plusieurs versions légèrement différentes selon les écrans."
+cases.fdj.problem;Problème FDJ;"Designers and developers were both slowed down. Visual consistency was a coin flip. Light/dark could not be shipped without a tokenized base.";"Designers et développeurs ralentis. La cohérence visuelle était aléatoire. Impossible de livrer le light/dark sans base tokenisée."
+cases.fdj.action.1;Action FDJ 1;Designed and improved core flows alongside system work;Concevoir et améliorer les parcours en parallèle du travail système
+cases.fdj.action.2;Action FDJ 2;"Took ownership of the mobile design system, first as a designer, then as referent";"Prendre en main le design system mobile, d'abord comme designer, puis comme référent"
+cases.fdj.action.3;Action FDJ 3;"Rebuilt the Figma library: automated variants, tokens, light/dark switch";"Refonte complète de la librairie Figma : variantes automatisées, tokens, switch light/dark"
+cases.fdj.action.4;Action FDJ 4;Held graphical consistency across the app and tooled the design + dev workflow;Tenir la cohérence graphique sur l'ensemble de l'app et outiller le workflow design + dev
+cases.fdj.action.5;Action FDJ 5;Worked alongside engineering and product to land components cleanly;Travailler avec les équipes eng et produit pour intégrer les composants proprement
+cases.fdj.result.1.v;Résultat FDJ 1;Token-driven light/dark mode shipped;Mode light/dark piloté par tokens livré en production
+cases.fdj.result.2.v;Résultat FDJ 2;"Variants automated, no manual upkeep";Variantes automatisées, zéro maintenance manuelle
+cases.fdj.result.3.v;Résultat FDJ 3;"Mission, system referent role";"Mission, dont le rôle de référent système"
+cases.fdj.result.4.v;Résultat FDJ 4;"Library, one source for the mobile app";"Librairie unique, une source pour toute l'app"
+TÉMOIGNAGES;;;
+recos.salome.quote;Citation Salomé M.;"Martin played a central role in scaling AVENIR — Société Générale Retail Banking's Design System. His Figma library architecture, his support of designers and developers, and his ability to set and apply a clear short and long-term vision make him a very complete Design System Manager.";"Martin a eu un rôle central dans le passage à l'échelle du Design System AVENIR de la Banque de Détails de la Société Générale. Son expertise sur l'architecture Figma, son accompagnement des Product Designers et développeurs, et sa capacité à appliquer une vision claire à court et long terme en font un Design System Manager très complet."
+recos.ivan.quote;Citation Ivan T.;"Martin was essential to setting up the Design System at Société Générale. His Figma expertise let us roll out design tokens across every multi-theme component. The slot pattern he set up to automate responsive rendering massively improved designer throughput.";"Martin a eu un rôle essentiel dans la mise en place du Design System à la Société Générale. Son expertise Figma nous a permis de déployer les design tokens sur l'ensemble des composants multi-thèmes. La mise en place de slots pour automatiser le rendu responsive a grandement facilité la production des designers."
+recos.justine.quote;Citation Justine L.;"It's thanks to Martin's relentless work that we shipped one of the most structuring DS projects: the token matrix. Today, we've gained tremendous speed and flexibility in how we design components. Beyond the system work, Martin was always there to help and train Product Designers.";"C'est grâce au travail acharné de Martin que nous avons pu lancer l'un des projets les plus structurants du DS : la matrice de tokens. On y a énormément gagné en rapidité et en flexibilité sur la conception des composants. Au-delà du système, Martin a toujours été présent pour aider et former les Product Designers."
+recos.marta.quote;Citation Marta M.;"Martin has a 360° view of design system rules, with exemplary rigor. His ability to structure, evolve and spread a coherent DS culture made the work of every Product Designer and dev team materially easier. Pragmatic, accessible, fast — I recommend him without hesitation.";"Martin possède une vision 360° des règles design system, avec une rigueur exemplaire. Sa capacité à structurer, faire évoluer et diffuser une culture DS cohérente a considérablement facilité le travail des Product Designers et des équipes dev. Pragmatique, accessible, rapide — je le recommande sans hésitation."
+recos.sarah.quote;Citation Sarah S.;"Working with Martin was as enjoyable as it was enriching. He brings calm, trust and positive momentum to a team. Beyond the technical chops, he's a teacher — always available to explain or unblock.";"Travailler avec Martin a été aussi agréable qu'enrichissant. Il apporte de la sérénité, de la confiance et une dynamique positive à toute l'équipe. Au-delà des compétences techniques, c'est un pédagogue — toujours disponible pour expliquer ou débloquer."
+recos.marc.quote;Citation Marc Q.;"Martin excels at managing design systems — it makes teamwork fluid and efficient. He has a real talent for rallying people and sharing ideas in an inspiring way. Technically he's top-tier, but what stands out is the human approach.";"Martin excelle dans la gestion des design systems, ce qui rend le travail d'équipe fluide et efficace. Il a un vrai talent pour rassembler et partager ses idées de manière inspirante. Techniquement au top, mais ce qui le distingue, c'est l'approche humaine."
+À PROPOS;;;
+about.now;Situation actuelle;"Eight years as a Product Designer focused on systems. Last mission: Design System Manager at Société Générale via Devoteam. Speaker at ECV Aix-en-Provence on Atomic Design and tokens. Based near Marseille for the past two years, full-remote.";"Huit ans de Product Design, spécialisé en design system. Dernière mission : Design System Manager chez Société Générale via Devoteam. Intervenant à l'ECV Aix-en-Provence sur l'Atomic Design et les tokens. Installé près de Marseille depuis deux ans, full remote."
+about.next;Recherche;"Looking for a Lead Design System role, full-remote CDI, in a product team that takes systems seriously. Open to selected freelance work in parallel: system audit, rollout, ops setup.";"À la recherche d'un poste de Lead Design System, CDI full remote, dans une équipe produit qui prend les systèmes au sérieux. Ouvert à du freelance ciblé en parallèle : audit système, déploiement, structuration des ops."
+about.p1.k;Principe 1 — label;Systems beat heroics;Méthode > héroïsme
+about.p1.v;Principe 1 — texte;A repeatable process beats a brilliant one-off.;Un process répétable vaut mieux qu'un coup de génie isolé.
+about.p2.k;Principe 2 — label;Measure or move on;Mesurer ou passer
+about.p2.v;Principe 2 — texte;If a system change has no metric, it isn't a change.;Sans métrique, un changement système n'en est pas un.
+about.p3.k;Principe 3 — label;Spread through people;Transmettre par les gens
+about.p3.v;Principe 3 — texte;Files don't adopt themselves. Designers do.;Les fichiers ne s'adoptent pas seuls. Les designers, oui.
+about.p4.k;Principe 4 — label;Boring on purpose;Prévisible par choix
+about.p4.v;Principe 4 — texte;Predictable surfaces buy you the budget for ambitious ones.;Des surfaces stables financent les prises de risque créatives.
+CONTACT;;;
+contact.sub;Sous-titre contact;"Best for: Lead Design System CDI (remote), or scoped freelance missions: system audit, rollout, ops setup.";"Idéal : poste de Lead Design System CDI (remote) ou mission freelance ciblée, audit système, déploiement, structuration des ops."
