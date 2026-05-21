@@ -324,11 +324,11 @@ const CONTENT = {
     home: {
       kicker: '01 — Sommaire',
       title: 'J\'aide les équipes à\nscale\nleur DS.',
-      sub: '8 ans de Product Design, spécialisé design system et design ops. De l\'e-commerce à la banque retail, je transmets aux équipes une façon de travailler — pas seulement des composants.',
+      sub: '8 ans de Product Design, spécialisé design system et design ops. De l\'e-commerce à la banque retail, je transmets aux équipes une façon de travailler, pas seulement des composants.',
       cta1: 'Voir les études',
       cta2: 'Me contacter',
       metrics: [
-        { value: 40, suffix: '+', label: 'Designers formés sur le système Société Générale', note: 'Ateliers, open hours, tutoriels et guides écrits — de l\'adoption, pas de l\'imposition.' },
+        { value: 40, suffix: '+', label: 'Designers formés sur le système Société Générale', note: 'Ateliers, open hours, tutoriels et guides écrits de l\'adoption, pas de l\'imposition.' },
         { value: 2, suffix: ' → 1', label: 'Design systems fusionnés en une seule librairie', note: 'Systèmes client + conseiller réunis, avec des modes dédiés. Moins de doublons, moins de dérive.' },
         { value: 8, suffix: '+', label: 'Ans à livrer des systèmes en production', note: '7 sites e-commerce, banque retail, mobile gaming, souscription telecom.' },
       ],
