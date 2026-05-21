@@ -1,36 +1,2863 @@
+
+Claude a terminé la réponse.
+guide moi pas à pas pour mettre mon site en ligne, de pref gratuitement. C'est un portefolio
+
+
+Processus de réflexion
+Processus de réflexion
+Ton site est fait avec quelle technologie ?
+HTML / CSS / JS
+Où est stocké le code de ton site en ce moment ?
+Sur mon ordi seulement
+Parfait ! Site statique HTML/CSS/JS + code uniquement en local — c'est le cas le plus simple qui soit. Je vais te guider pas à pas.
+
+La meilleure option gratuite pour toi : GitHub Pages
+
+C'est gratuit, fiable, et fait exactement pour ça. Voici le plan en 4 étapes :
+
+Étape 1 — Créer un compte GitHub
+Va sur github.com et crée un compte gratuit si tu n'en as pas
+Vérifie ton email pour confirmer le compte
+Étape 2 — Créer un dépôt (repository)
+Clique sur le bouton "New" (ou le + en haut à droite → New repository)
+Nomme-le exactement comme ça : ton-username.github.io (remplace ton-username par ton pseudo GitHub exact)
+Exemple : si tu t'appelles martinmolet, le repo s'appelle martinmolet.github.io
+Laisse-le en Public
+Clique "Create repository"
+Étape 3 — Uploader tes fichiers
+La façon la plus simple sans ligne de commande :
+
+Sur la page du repo, clique "uploading an existing file"
+Glisse-dépose tous tes fichiers (index.html, style.css, images, etc.) dans la zone
+Clique "Commit changes" en bas
+⚠️ Assure-toi que ta page principale s'appelle bien index.html — c'est ce que GitHub Pages cherche en premier.
+
+Étape 4 — Activer GitHub Pages
+Dans ton repo, clique sur "Settings" (onglet en haut)
+Dans le menu gauche, clique "Pages"
+Sous Source, sélectionne "Deploy from a branch"
+Choisis la branche main et le dossier / (root)
+Clique "Save"
+Après 1-2 minutes, ton site sera accessible à l'adresse : 👉 https://ton-username.github.io
+
+Et après ?
+
+Si tu veux un domaine personnalisé (ex: martinmolet.fr) tu peux l'acheter (~10€/an) et le brancher facilement sur GitHub Pages
+Pour les mises à jour : tu retournes sur GitHub et tu re-uploades les fichiers modifiés
+Tu veux que je t'aide sur une étape en particulier, ou tu as des questions sur l'organisation de tes fichiers ?
+
+martinmolet.github.io
+
+
+Processus de réflexion
+Processus de réflexion
+Parfait, donc ton repo devra s'appeler exactement martinmolet.github.io et ton site sera accessible à :
+
+👉 https://martinmolet.github.io
+
+Tu en es où dans les étapes ? Tu as déjà créé le compte GitHub, ou tu pars de zéro ?
+
+la page n'est pas accessible
+
+
+Processus de réflexion
+Processus de réflexion
+C'est normal, il faut d'abord créer le repo et uploader les fichiers ! La page n'existera que quand tout sera en place.
+
+Tu en es à quelle étape exactement ?
+
+Tu n'as pas encore de compte GitHub
+Tu as un compte mais pas encore créé le repo martinmolet.github.io
+Tu as créé le repo mais pas encore uploadé les fichiers
+Tu as tout fait (repo + fichiers + GitHub Pages activé) mais le site ne s'affiche toujours pas
+j'ai fait toute les étapes
+
+
+Processus de réflexion
+Processus de réflexion
+OK, quelques vérifications rapides pour trouver le problème :
+
+1. Le nom du repo est-il exact ? Va sur github.com/martinmolet — est-ce que tu vois bien un repo nommé martinmolet.github.io (avec ton username exact, même casse) ?
+
+2. As-tu un fichier index.html à la racine ? Dans ton repo, est-ce que index.html apparaît directement dans la liste des fichiers (pas dans un sous-dossier) ?
+
+3. GitHub Pages est-il bien activé ? Dans Settings → Pages, est-ce que tu vois un message vert du type "Your site is live at https://martinmolet.github.io" ?
+
+4. As-tu attendu 2-3 minutes ? GitHub peut mettre quelques minutes à déployer la première fois. Si tu viens de finir, attends encore un peu et rafraîchis.
+
+Dis-moi ce que tu vois à chacun de ces points et on trouvera le souci !
+
+File not found
+The site configured at this address does not contain the requested file.
+If this is your site, make sure that the filename case matches the URL as well as any file permissions. For root URLs (like http://example.com/) you must provide an index.html file.
+[Read the full documentation](https://help.github.com/pages/) for more information about using GitHub Pages.
+
+
+Processus de réflexion
+Processus de réflexion
+Bonne nouvelle : GitHub Pages fonctionne bien, le problème c'est juste qu'il ne trouve pas ton fichier index.html.
+
+Deux causes possibles :
+
+Cause 1 — Ton fichier HTML ne s'appelle pas index.html Il s'appelle peut-être portfolio.html, home.html, ou autre chose. Dans ce cas, renomme-le en index.html directement sur GitHub :
+
+Clique sur le fichier dans ton repo
+Clique sur l'icône ✏️ (Edit)
+Change le nom en haut en index.html
+Clique "Commit changes"
+Cause 2 — Tes fichiers sont dans un sous-dossier Si tu as uploadé un dossier entier, tes fichiers se retrouvent peut-être dans martinmolet.github.io/mon-dossier/index.html au lieu d'être à la racine.
+
+Va sur github.com/martinmolet/martinmolet.github.io et dis-moi ce que tu vois dans la liste des fichiers — je te dirai exactement quoi faire.
+
+Image téléchargée
+1779351383823_image.png
+Voilà le problème ! Tes fichiers sont dans un sous-dossier Portefolio au lieu d'être à la racine du repo.
+
+GitHub Pages cherche index.html directement à la racine, pas dans un dossier.
+
+Solution la plus simple — déplacer les fichiers :
+
+Clique sur le dossier Portefolio dans ton repo
+Tu vas voir tous tes fichiers listés dedans
+Pour chaque fichier, clique dessus → icône ✏️ → en haut du fichier, change le chemin en supprimant Portefolio/ devant le nom
+Exemple : Portefolio/index.html → index.html
+Clique "Commit changes"
+Répète pour chaque fichier (CSS, images, JS...)
+OU — solution encore plus simple : Retourne dans Settings → Pages et change la source pour pointer vers le sous-dossier si GitHub te le propose (mais cette option n'est pas toujours disponible).
+
+La méthode la plus rapide reste de supprimer le repo et recommencer en uploadant directement les fichiers (pas le dossier) :
+
+Settings → Danger Zone → Delete this repository
+Recrée martinmolet.github.io
+Cette fois, entre dans ton dossier Portefolio sur ton ordi, sélectionne tous les fichiers à l'intérieur et uploade-les directement
+Tu préfères quelle option ?
+
+Image téléchargée
+1779351706250_image.png
+
+Processus de réflexion
+Processus de réflexion
+Bien avancé ! Je vois deux choses importantes :
+
+Bonne nouvelle — index.html est bien à la racine et le déploiement est en cours (le rond orange à côté de "github-pages"). Attends 2 minutes qu'il devienne vert.
+
+Attention — ton repo s'appelle portefolio et non martinmolet.github.io, donc l'URL sera : 👉 https://martinmolet.github.io/portefolio (pas juste martinmolet.github.io)
+
+Problème potentiel avec tes fichiers .jsx
+
+Je vois app.jsx et tweaks-panel.jsx dans ton repo. Ces fichiers React ne fonctionnent pas directement dans un navigateur — ils ont besoin d'être compilés. Si ton site s'appuie dessus, il risque d'être cassé une fois en ligne.
+
+Dis-moi : est-ce que ces fichiers .jsx sont vraiment utilisés par ton index.html, ou c'est juste des fichiers qui traînaient dans le dossier ?
+
+Pour résumer ce qu'il faut faire maintenant :
+
+Attends que le rond orange devienne ✅ vert
+Teste l'URL https://martinmolet.github.io/portefolio
+Dis-moi ce que tu vois
+regarde ça marche mais pas de photo, ni de lien avec les étudess de cas
+
+https://martinmolet.github.io/portefolio/
+
+
+Processus de réflexion
+Processus de réflexion
+C'est probablement un problème de chemins de fichiers. Quelques vérifications rapides :
+
+Pour la photo, ouvre ton index.html sur GitHub et cherche comment l'image est référencée. Est-ce que ça ressemble à l'un de ces cas ?
+
+src="martin.jpg" → ✅ correct
+src="images/martin.jpg" → ❌ mais le dossier images/ n'est pas uploadé
+src="C:/Users/Martin/..." → ❌ chemin absolu local qui ne marche qu'en local
+Pour les liens des études de cas, idem — vérifie comment ils sont écrits dans ton HTML. Je vois que tu as uploadé ecv.html, fdj.html, sg.html donc les fichiers sont là, mais le lien doit pointer vers le bon endroit.
+
+La façon la plus rapide de diagnostiquer : ouvre ton site dans Chrome, fais clic droit → Inspecter → onglet Console (ou appuie sur F12). Tu verras en rouge les fichiers qui ne se chargent pas et leur chemin exact.
+
+Qu'est-ce que tu vois dans la console ? Ou si tu veux, partage le contenu de ton index.html ici et je te dirai exactement quoi corriger.
+
+index.html
+html
+
+
+Processus de réflexion
+Processus de réflexion
+Je lis ton index.html pour trouver le problème.
+
+
+Lu un fichier
+Lu un fichier
+J'ai trouvé le problème de la photo ! Ligne 448 de ton code :
+
+html
+<img src="assets/martin.jpg" alt="Martin Molet" />
+Ton image s'appelle martin.jpg et elle est à la racine du repo, mais le code la cherche dans un dossier assets/ qui n'existe pas sur GitHub.
+
+Je te prépare un fichier corrigé.
+
+
+Lu un fichier
+Lu un fichier
+La correction est simple ! Voici exactement quoi faire sur GitHub :
+
+Pour la photo :
+
+Dans ton repo, clique sur index.html
+Clique sur l'icône ✏️ Edit (en haut à droite du fichier)
+Utilise Ctrl+H (ou Cmd+H) pour chercher/remplacer
+Cherche : assets/martin.jpg
+Remplace par : martin.jpg
+Clique "Commit changes" → "Commit changes" (vert)
+Attends 1-2 minutes et la photo devrait apparaître.
+
+Pour les liens des études de cas, je n'ai pas encore ton fichier content.js — c'est là que sont définis les liens vers sg.html, fdj.html, ecv.html. Tu peux me le partager ici et je vérifierai les chemins, ou dis-moi ce qui se passe exactement quand tu cliques sur une étude de cas (erreur 404 ? page blanche ? rien ?).
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martin Molet — Lead Design System & Design Ops</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="content.js"></script>
+<script type="text/babel">
+// tweaks-panel.jsx — inlined to avoid file:// XHR restriction
+const __TWEAKS_STYLE = 
+  .twk-panel{position:fixed;right:16px;bottom:16px;z-index:2147483646;width:280px;
+    max-height:calc(100vh - 32px);display:flex;flex-direction:column;
+    background:rgba(250,249,247,.78);color:#29261b;
+    -webkit-backdrop-filter:blur(24px) saturate(160%);backdrop-filter:blur(24px) saturate(160%);
+    border:.5px solid rgba(255,255,255,.6);border-radius:14px;
+    box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 12px 40px rgba(0,0,0,.18);
+    font:11.5px/1.4 ui-sans-serif,system-ui,-apple-system,sans-serif;overflow:hidden}
+  .twk-hd{display:flex;align-items:center;justify-content:space-between;
+    padding:10px 8px 10px 14px;cursor:move;user-select:none}
+  .twk-hd b{font-size:12px;font-weight:600;letter-spacing:.01em}
+  .twk-x{appearance:none;border:0;background:transparent;color:rgba(41,38,27,.55);
+    width:22px;height:22px;border-radius:6px;cursor:default;font-size:13px;line-height:1}
+  .twk-x:hover{background:rgba(0,0,0,.06);color:#29261b}
+  .twk-body{padding:2px 14px 14px;display:flex;flex-direction:column;gap:10px;
+    overflow-y:auto;overflow-x:hidden;min-height:0;
+    scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.15) transparent}
+  .twk-body::-webkit-scrollbar{width:8px}
+  .twk-body::-webkit-scrollbar-track{background:transparent;margin:2px}
+  .twk-body::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:4px;
+    border:2px solid transparent;background-clip:content-box}
+  .twk-body::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.25);
+    border:2px solid transparent;background-clip:content-box}
+  .twk-row{display:flex;flex-direction:column;gap:5px}
+  .twk-row-h{flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
+  .twk-lbl{display:flex;justify-content:space-between;align-items:baseline;
+    color:rgba(41,38,27,.72)}
+  .twk-lbl>span:first-child{font-weight:500}
+  .twk-val{color:rgba(41,38,27,.5);font-variant-numeric:tabular-nums}
+  .twk-sect{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:rgba(41,38,27,.45);padding:10px 0 0}
+  .twk-sect:first-child{padding-top:0}
+  .twk-field{appearance:none;width:100%;height:26px;padding:0 8px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:7px;
+    background:rgba(255,255,255,.6);color:inherit;font:inherit;outline:none}
+  .twk-field:focus{border-color:rgba(0,0,0,.25);background:rgba(255,255,255,.85)}
+  select.twk-field{padding-right:22px;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='rgba(0,0,0,.5)' d='M0 0h10L5 6z'/></svg>");
+    background-repeat:no-repeat;background-position:right 8px center}
+  .twk-slider{appearance:none;-webkit-appearance:none;width:100%;height:4px;margin:6px 0;
+    border-radius:999px;background:rgba(0,0,0,.12);outline:none}
+  .twk-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;
+    width:14px;height:14px;border-radius:50%;background:#fff;
+    border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
+  .twk-slider::-moz-range-thumb{width:14px;height:14px;border-radius:50%;
+    background:#fff;border:.5px solid rgba(0,0,0,.12);box-shadow:0 1px 3px rgba(0,0,0,.2);cursor:default}
+  .twk-seg{position:relative;display:flex;padding:2px;border-radius:8px;
+    background:rgba(0,0,0,.06);user-select:none}
+  .twk-seg-thumb{position:absolute;top:2px;bottom:2px;border-radius:6px;
+    background:rgba(255,255,255,.9);box-shadow:0 1px 2px rgba(0,0,0,.12);
+    transition:left .15s cubic-bezier(.3,.7,.4,1),width .15s}
+  .twk-seg.dragging .twk-seg-thumb{transition:none}
+  .twk-seg button{appearance:none;position:relative;z-index:1;flex:1;border:0;
+    background:transparent;color:inherit;font:inherit;font-weight:500;min-height:22px;
+    border-radius:6px;cursor:default;padding:4px 6px;line-height:1.2;overflow-wrap:anywhere}
+  .twk-toggle{position:relative;width:32px;height:18px;border:0;border-radius:999px;
+    background:rgba(0,0,0,.15);transition:background .15s;cursor:default;padding:0}
+  .twk-toggle[data-on="1"]{background:#34c759}
+  .twk-toggle i{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;
+    background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .15s}
+  .twk-toggle[data-on="1"] i{transform:translateX(14px)}
+  .twk-num{display:flex;align-items:center;height:26px;padding:0 0 0 8px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:7px;background:rgba(255,255,255,.6)}
+  .twk-num-lbl{font-weight:500;color:rgba(41,38,27,.6);cursor:ew-resize;user-select:none;padding-right:8px}
+  .twk-num input{flex:1;min-width:0;height:100%;border:0;background:transparent;
+    font:inherit;font-variant-numeric:tabular-nums;text-align:right;padding:0 8px 0 0;
+    outline:none;color:inherit;-moz-appearance:textfield}
+  .twk-num input::-webkit-inner-spin-button,.twk-num input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+  .twk-num-unit{padding-right:8px;color:rgba(41,38,27,.45)}
+  .twk-btn{appearance:none;height:26px;padding:0 12px;border:0;border-radius:7px;
+    background:rgba(0,0,0,.78);color:#fff;font:inherit;font-weight:500;cursor:default}
+  .twk-btn:hover{background:rgba(0,0,0,.88)}
+  .twk-btn.secondary{background:rgba(0,0,0,.06);color:inherit}
+  .twk-btn.secondary:hover{background:rgba(0,0,0,.1)}
+  .twk-swatch{appearance:none;-webkit-appearance:none;width:56px;height:22px;
+    border:.5px solid rgba(0,0,0,.1);border-radius:6px;padding:0;cursor:default;
+    background:transparent;flex-shrink:0}
+  .twk-swatch::-webkit-color-swatch-wrapper{padding:0}
+  .twk-swatch::-webkit-color-swatch{border:0;border-radius:5.5px}
+  .twk-swatch::-moz-color-swatch{border:0;border-radius:5.5px}
+;
+function useTweaks(defaults) {
+  const [values, setValues] = React.useState(defaults);
+  const setTweak = React.useCallback((keyOrEdits, val) => {
+    const edits = typeof keyOrEdits === 'object' && keyOrEdits !== null
+      ? keyOrEdits : { [keyOrEdits]: val };
+    setValues((prev) => ({ ...prev, ...edits }));
+    try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits }, '*'); } catch(e) {}
+  }, []);
+  return [values, setTweak];
+}
+function TweaksPanel({ title = 'Tweaks', children }) {
+  const [open, setOpen] = React.useState(false);
+  const dragRef = React.useRef(null);
+  const offsetRef = React.useRef({ x: 16, y: 16 });
+  const PAD = 16;
+  const clampToViewport = React.useCallback(() => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const w = panel.offsetWidth, h = panel.offsetHeight;
+    const maxRight = Math.max(PAD, window.innerWidth - w - PAD);
+    const maxBottom = Math.max(PAD, window.innerHeight - h - PAD);
+    offsetRef.current = {
+      x: Math.min(maxRight, Math.max(PAD, offsetRef.current.x)),
+      y: Math.min(maxBottom, Math.max(PAD, offsetRef.current.y)),
+    };
+    panel.style.right = offsetRef.current.x + 'px';
+    panel.style.bottom = offsetRef.current.y + 'px';
+  }, []);
+  React.useEffect(() => {
+    if (!open) return;
+    clampToViewport();
+    const ro = new ResizeObserver(clampToViewport);
+    ro.observe(document.documentElement);
+    return () => ro.disconnect();
+  }, [open, clampToViewport]);
+  React.useEffect(() => {
+    const onMsg = (e) => {
+      const t = e?.data?.type;
+      if (t === '__activate_edit_mode') setOpen(true);
+      else if (t === '__deactivate_edit_mode') setOpen(false);
+    };
+    window.addEventListener('message', onMsg);
+    try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e) {}
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+  const dismiss = () => {
+    setOpen(false);
+    try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch(e) {}
+  };
+  const onDragStart = (e) => {
+    const panel = dragRef.current;
+    if (!panel) return;
+    const r = panel.getBoundingClientRect();
+    const sx = e.clientX, sy = e.clientY;
+    const startRight = window.innerWidth - r.right;
+    const startBottom = window.innerHeight - r.bottom;
+    const move = (ev) => {
+      offsetRef.current = { x: startRight - (ev.clientX - sx), y: startBottom - (ev.clientY - sy) };
+      clampToViewport();
+    };
+    const up = () => { window.removeEventListener('mousemove', move); window.removeEventListener('mouseup', up); };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', up);
+  };
+  if (!open) return null;
+  return (
+    <>
+      <style>{__TWEAKS_STYLE}</style>
+      <div ref={dragRef} className="twk-panel" style={{ right: offsetRef.current.x, bottom: offsetRef.current.y }}>
+        <div className="twk-hd" onMouseDown={onDragStart}>
+          <b>{title}</b>
+          <button className="twk-x" aria-label="Close tweaks" onMouseDown={(e) => e.stopPropagation()} onClick={dismiss}>✕</button>
+        </div>
+        <div className="twk-body">{children}</div>
+      </div>
+    </>
+  );
+}
+function TweakSection({ label, children }) {
+  return <><div className="twk-sect">{label}</div>{children}</>;
+}
+function TweakRow({ label, value, children, inline = false }) {
+  return (
+    <div className={inline ? 'twk-row twk-row-h' : 'twk-row'}>
+      <div className="twk-lbl">
+        <span>{label}</span>
+        {value != null && <span className="twk-val">{value}</span>}
+      </div>
+      {children}
+    </div>
+  );
+}
+function TweakSlider({ label, value, min = 0, max = 100, step = 1, unit = '', onChange }) {
+  return (
+    <TweakRow label={label} value={${value}${unit}}>
+      <input type="range" className="twk-slider" min={min} max={max} step={step}
+             value={value} onChange={(e) => onChange(Number(e.target.value))} />
+    </TweakRow>
+  );
+}
+function TweakToggle({ label, value, onChange }) {
+  return (
+    <div className="twk-row twk-row-h">
+      <div className="twk-lbl"><span>{label}</span></div>
+      <button type="button" className="twk-toggle" data-on={value ? '1' : '0'}
+              role="switch" aria-checked={!!value} onClick={() => onChange(!value)}><i /></button>
+    </div>
+  );
+}
+function TweakRadio({ label, value, options, onChange }) {
+  const trackRef = React.useRef(null);
+  const [dragging, setDragging] = React.useState(false);
+  const opts = options.map((o) => (typeof o === 'object' ? o : { value: o, label: o }));
+  const idx = Math.max(0, opts.findIndex((o) => o.value === value));
+  const n = opts.length;
+  const valueRef = React.useRef(value);
+  valueRef.current = value;
+  const segAt = (clientX) => {
+    const r = trackRef.current.getBoundingClientRect();
+    const inner = r.width - 4;
+    const i = Math.floor(((clientX - r.left - 2) / inner) * n);
+    return opts[Math.max(0, Math.min(n - 1, i))].value;
+  };
+  const onPointerDown = (e) => {
+    setDragging(true);
+    const v0 = segAt(e.clientX);
+    if (v0 !== valueRef.current) onChange(v0);
+    const move = (ev) => { if (!trackRef.current) return; const v = segAt(ev.clientX); if (v !== valueRef.current) onChange(v); };
+    const up = () => { setDragging(false); window.removeEventListener('pointermove', move); window.removeEventListener('pointerup', up); };
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+  };
+  return (
+    <TweakRow label={label}>
+      <div ref={trackRef} role="radiogroup" onPointerDown={onPointerDown}
+           className={dragging ? 'twk-seg dragging' : 'twk-seg'}>
+        <div className="twk-seg-thumb"
+             style={{ left: calc(2px + ${idx} * (100% - 4px) / ${n}), width: calc((100% - 4px) / ${n}) }} />
+        {opts.map((o) => (
+          <button key={o.value} type="button" role="radio" aria-checked={o.value === value}>{o.label}</button>
+        ))}
+      </div>
+    </TweakRow>
+  );
+}
+function TweakSelect({ label, value, options, onChange }) {
+  return (
+    <TweakRow label={label}>
+      <select className="twk-field" value={value} onChange={(e) => onChange(e.target.value)}>
+        {options.map((o) => {
+          const v = typeof o === 'object' ? o.value : o;
+          const l = typeof o === 'object' ? o.label : o;
+          return <option key={v} value={v}>{l}</option>;
+        })}
+      </select>
+    </TweakRow>
+  );
+}
+function TweakColor({ label, value, onChange }) {
+  return (
+    <div className="twk-row twk-row-h">
+      <div className="twk-lbl"><span>{label}</span></div>
+      <input type="color" className="twk-swatch" value={value} onChange={(e) => onChange(e.target.value)} />
+    </div>
+  );
+}
+function TweakButton({ label, onClick, secondary = false }) {
+  return (
+    <button type="button" className={secondary ? 'twk-btn secondary' : 'twk-btn'} onClick={onClick}>{label}</button>
+  );
+}
+Object.assign(window, {
+  useTweaks, TweaksPanel, TweakSection, TweakRow,
+  TweakSlider, TweakToggle, TweakRadio, TweakSelect,
+  TweakColor, TweakButton,
+});
+// ─────────────────────────────────────────────────────────────────────────────
+// app.jsx — inlined to avoid file:// XHR restriction
+// ─────────────────────────────────────────────────────────────────────────────
+const { useState, useEffect, useRef, useMemo, useCallback } = React;
+const TWEAK_DEFAULTS = {
+  "accent": "coral",
+  "density": "comfortable",
+  "grid": false,
+  "crosshair": true,
+  "typePair": "mono-only"
+};
+const ACCENTS = {
+  cyan:    { hex: '
+#7DE2D1', label: 'Cyan'  },
+  amber:   { hex: '
+#F4C76B', label: 'Amber' },
+  iris:    { hex: '
+#A5A8FF', label: 'Iris'  },
+  coral:   { hex: '
+#FF9E80', label: 'Coral' },
+  white:   { hex: '
+#EDEDED', label: 'Bone'  },
+};
+function useTweaksLocal() {
+  const [tweaks, setTweaks] = useState(TWEAK_DEFAULTS);
+  const setTweak = useCallback((keyOrObj, val) => {
+    const patch = typeof keyOrObj === 'string' ? { [keyOrObj]: val } : keyOrObj;
+    setTweaks(prev => ({ ...prev, ...patch }));
+    try { window.parent?.postMessage({ type: '__edit_mode_set_keys', edits: patch }, '*'); } catch (e) {}
+  }, []);
+  return [tweaks, setTweak];
+}
+function useCountUp(target, start, duration = 1400) {
+  const [v, setV] = useState(0);
+  useEffect(() => {
+    if (!start) return;
+    let raf, t0;
+    const tick = (t) => {
+      if (!t0) t0 = t;
+      const p = Math.min(1, (t - t0) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setV(Math.round(target * eased));
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [start, target, duration]);
+  return v;
+}
+function useInView(ref, opts = { threshold: 0.3 }) {
+  const [seen, setSeen] = useState(false);
+  useEffect(() => {
+    if (!ref.current) return;
+    const io = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) { setSeen(true); io.disconnect(); }
+    }, opts);
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, [ref]);
+  return seen;
+}
+function TopBar({ lang, setLang, content, onJump, sectionId }) {
+  return (
+    <header className="topbar">
+      <div className="tb-l">
+        <div className="logo">
+          <span className="logo-mark">◢◣</span>
+          <span className="logo-name">MARTIN.MOLET</span>
+          <span className="logo-role">// {content.meta.role}</span>
+        </div>
+      </div>
+      <nav className="tb-c">
+        {content.nav.map((n, i) => {
+          const ids = ['home', 'cases', 'experience', 'contact'];
+          const id = ids[i];
+          return (
+            <button key={n} className={navlink ${sectionId === id ? 'is-active' : ''}} onClick={() => onJump(id)}>
+              <span className="navnum">{String(i + 1).padStart(2, '0')}</span>
+              <span>{n}</span>
+            </button>
+          );
+        })}
+      </nav>
+      <div className="tb-r"></div>
+    </header>
+  );
+}
+function StatusBar({ content, sectionId }) {
+  const sections = ['home', 'cases', 'experience', 'contact'];
+  const idx = Math.max(0, sections.indexOf(sectionId));
+  return (
+    <footer className="statusbar">
+      <div className="sb-cell"><span className="sb-k">FILE</span><span>{content.meta.filename}</span></div>
+      <div className="sb-cell"><span className="sb-k">SHEET</span><span>{String(idx + 1).padStart(2, '0')} / {String(sections.length).padStart(2, '0')}</span></div>
+      <div className="sb-cell"><span className="sb-k">SCALE</span><span>1:1</span></div>
+      <div className="sb-cell"><span className="sb-k">REV</span><span>{content.meta.lastUpdated}</span></div>
+      <div className="sb-cell flex-1 right">
+        <span className="sb-k">STATUS</span>
+        <span className="status-pill"><span className="dot" /> {content.meta.status}</span>
+      </div>
+    </footer>
+  );
+}
+function HomeSheet({ content, onJump }) {
+  const ref = useRef();
+  const seen = useInView(ref);
+  return (
+    <section className="sheet" id="home" ref={ref}>
+      <SheetHeader kicker={content.home.kicker} />
+      <div className="hero">
+        <div className="hero-l">
+          <h1 className="hero-title">
+            {content.home.title.split('\n').map((l, i) => (
+              <span key={i} className="hero-line">{l}</span>
+            ))}
+          </h1>
+          <p className="hero-sub">{content.home.sub}</p>
+          <div className="hero-cta">
+            <button className="btn btn-primary" onClick={() => onJump('cases')}>
+              <span>{content.home.cta1}</span>
+              <span className="btn-arrow">↗</span>
+            </button>
+            <button className="btn btn-ghost" onClick={() => onJump('contact')}>
+              <span>{content.home.cta2}</span>
+            </button>
+          </div>
+          <div className="hero-meta">
+            <div>
+              <span className="k">ROLE</span>
+              <span>{(() => {
+                const idx = content.meta.role.lastIndexOf(' & ');
+                return idx > 0
+                  ? <>{content.meta.role.slice(0, idx)}<br/>{content.meta.role.slice(idx + 1)}</>
+                  : content.meta.role;
+              })()}</span>
+            </div>
+            <div><span className="k">LOC</span><span style={{whiteSpace:'pre-line'}}>{content.meta.location}</span></div>
+            <div><span className="k">AVAIL</span><span style={{whiteSpace:'pre-line'}}>{content.meta.status}</span></div>
+          </div>
+        </div>
+        <div className="hero-r">
+          <div className="portrait">
+            <div className="portrait-frame">
+              <img src="martin.jpg" alt="Martin Molet" />
+              <div className="corner tl" />
+              <div className="corner tr" />
+              <div className="corner bl" />
+              <div className="corner br" />
+              <div className="dim-h"><span>720</span></div>
+              <div className="dim-v"><span>1080</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="metrics">
+        {content.home.metrics.map((m, i) => (
+          <MetricCard key={i} m={m} index={i} start={seen} />
+        ))}
+      </div>
+    </section>
+  );
+}
+function MetricCard({ m, index, start }) {
+  const v = useCountUp(m.value, start, 1200 + index * 200);
+  return (
+    <article className="metric">
+      <div className="metric-id">M.{String(index + 1).padStart(2, '0')}</div>
+      <div className="metric-value">
+        <span className="mv-num">{v}</span>
+        <span className="mv-suffix">{m.suffix}</span>
+      </div>
+      <div className="metric-label">{m.label}</div>
+      <div className="metric-note">{m.note}</div>
+    </article>
+  );
+}
+function WorkSheet({ content }) {
+  const [active, setActive] = useState('ds');
+  const sec = content.work.sections.find(s => s.id === active);
+  return (
+    <section className="sheet" id="work">
+      <SheetHeader kicker={content.work.kicker} title={content.work.title} sub={content.work.sub} />
+      <div className="practice-wrap">
+        <aside className="practice-tabs" role="tablist">
+          {content.work.sections.map(s => (
+            <button key={s.id} className={practice-tab ${active === s.id ? 'on' : ''}} onClick={() => setActive(s.id)}>
+              <span className="pt-tag">{s.tag}</span>
+              <span className="pt-title">{s.title}</span>
+              <span className="pt-arrow">{active === s.id ? '●' : '○'}</span>
+            </button>
+          ))}
+        </aside>
+        <div className="practice-pane" key={active}>
+          <div className="pp-head">
+            <span className="pp-tag">PRACTICE / {sec.tag}</span>
+            <h3 className="pp-title">{sec.title}</h3>
+            <p className="pp-one">{sec.oneLiner}</p>
+          </div>
+          <div className="pp-grid">
+            <div className="pp-col">
+              <div className="col-h"><span>Method</span><span className="col-rule" /></div>
+              <ol className="method">
+                {sec.method.map((step, i) => (
+                  <li key={i}><span className="m-num">{String(i + 1).padStart(2, '0')}</span><span>{step}</span></li>
+                ))}
+              </ol>
+            </div>
+            <div className="pp-col">
+              <div className="col-h"><span>Proof</span><span className="col-rule" /></div>
+              <ul className="proof">
+                {sec.proof.map((p, i) => (
+                  <li key={i}><div className="proof-k">{p.k}</div><div className="proof-v">{p.v}</div></li>
+                ))}
+              </ul>
+              {sec.id === 'ds' && <TokenSwitcher />}
+              {sec.id === 'ops' && <OpsDashboard />}
+              {sec.id === 'ai' && <AIDocPreview />}
+              {sec.id === 'teach' && <WorkshopBoard />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+function SegSmall({ label, opts, val, onChange }) {
+  return (
+    <div className="seg">
+      <span className="seg-l">{label}</span>
+      <div className="seg-r">
+        {opts.map(o => (
+          <button key={o} className={val === o ? 'on' : ''} onClick={() => onChange(o)}>{o}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
+function TokenSwitcher() {
+  const [theme, setTheme] = useState('dark');
+  const [density, setDensity] = useState('comfy');
+  const [contrast, setContrast] = useState(false);
+  const surface = theme === 'dark' ? '
+#0E1213' : '
+#F7F6F2';
+  const ink = theme === 'dark' ? '
+#E6E6E1' : '
+#13171A';
+  const muted = theme === 'dark' ? '
+#6F7A7A' : '
+#7A7A6F';
+  const accent = contrast ? '
+#FFFFFF' : 'var(--accent)';
+  const pad = density === 'comfy' ? 14 : density === 'cozy' ? 10 : 6;
+  return (
+    <div className="ts">
+      <div className="ts-h"><span>Live token switcher</span><span className="ts-h-r">live</span></div>
+      <div className="ts-controls">
+        <SegSmall label="Theme" opts={['dark', 'light']} val={theme} onChange={setTheme} />
+        <SegSmall label="Density" opts={['comfy', 'cozy', 'tight']} val={density} onChange={setDensity} />
+        <SegSmall label="Contrast" opts={['default', 'AAA']} val={contrast ? 'AAA' : 'default'} onChange={(v) => setContrast(v === 'AAA')} />
+      </div>
+      <div className="ts-preview" style={{ background: surface, color: ink, '--pad': pad + 'px' }}>
+        <div className="ts-card">
+          <div className="ts-row" style={{ color: muted }}><span>card.title</span><span>·</span><span>v2.4</span></div>
+          <div className="ts-h-card" style={{ color: ink }}>Themed component</div>
+          <div className="ts-body" style={{ color: muted }}>The same JSON tokens drive every render target — web, iOS, Android. Switching theme is one variable change.</div>
+          <div className="ts-actions">
+            <button className="ts-btn" style={{ borderColor: accent, color: accent }}>Action</button>
+            <button className="ts-btn ghost" style={{ color: ink, borderColor: muted }}>Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+function OpsDashboard() {
+  const bars = [
+    { l: 'Adoption', v: 0.92 },
+    { l: 'Reuse', v: 0.78 },
+    { l: 'Drift', v: 0.08, bad: true },
+    { l: 'Debt', v: 0.21, bad: true },
+  ];
+  return (
+    <div className="ts">
+      <div className="ts-h"><span>Ops dashboard — wave 4</span><span className="ts-h-r">read-only</span></div>
+      <div className="ops-grid">
+        {bars.map(b => (
+          <div key={b.l} className="ops-row">
+            <div className="ops-l">{b.l}</div>
+            <div className="ops-track"><div className={ops-fill ${b.bad ? 'bad' : ''}} style={{ width: (b.v * 100) + '%' }} /></div>
+            <div className="ops-v">{Math.round(b.v * 100)}%</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+function AIDocPreview() {
+  return (
+    <div className="ts">
+      <div className="ts-h"><span>component / Button.mdx</span><span className="ts-h-r">auto-generated</span></div>
+      <pre className="code">{# Button\n\nPrimary action surface.\nTokens: \color.action\, \radius.sm\, \space.2\.\n\n## Props\n- variant: 'primary' | 'ghost' | 'danger'\n- size: 'sm' | 'md' | 'lg'\n- icon?: IconToken\n\n## Usage\n> Use one primary per view.\n> Pair with ghost for cancel.}</pre>
+    </div>
+  );
+}
+function WorkshopBoard() {
+  const items = ['Tokens 101 — half day', 'System governance — 90 min', 'Figma variables clinic — 2h', 'Component contract review — 1h'];
+  return (
+    <div className="ts">
+      <div className="ts-h"><span>Workshop catalog</span><span className="ts-h-r">2025 — 2026</span></div>
+      <ul className="ws">
+        {items.map((it, i) => (
+          <li key={i}><span className="ws-tick">▢</span><span>{it}</span><span className="ws-id">WS.{String(i + 1).padStart(2, '0')}</span></li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+function CasesSheet({ content }) {
+  const [open, setOpen] = useState('sg');
+  return (
+    <section className="sheet" id="cases">
+      <SheetHeader kicker={content.cases.kicker} title={content.cases.title} />
+      <div className="cases">
+        {content.cases.items.map(c => (
+          <CaseRow key={c.id} c={c} open={open === c.id} onToggle={() => setOpen(open === c.id ? '' : c.id)} />
+        ))}
+      </div>
+    </section>
+  );
+}
+function CaseRow({ c, open, onToggle }) {
+  const ref = useRef();
+  const seen = useInView(ref, { threshold: 0.2 });
+  return (
+    <article className={case ${open ? 'open' : ''}} ref={ref}>
+      <div className="case-head" onClick={onToggle} style={{cursor:'pointer'}}>
+        <div className="case-head-l">
+          <div className="case-id">CASE / {c.id.toUpperCase()}</div>
+          <div className="case-client">{c.client}</div>
+          <div className="case-summary">{c.summary}</div>
+          {c.detailUrl && (
+            <a href={c.detailUrl} className="case-detail-link" onClick={e => e.stopPropagation()}>Étude complète ↗</a>
+          )}
+        </div>
+        <div className="case-head-r">
+          <div className="case-meta-line"><span>{c.role}</span><span>·</span><span>{c.period}</span></div>
+          <div className="case-toggle">{open ? '— close' : '+ open'}</div>
+        </div>
+      </div>
+      <div className="case-body">
+        <div className="case-inner">
+          <CaseBlock label="Context" body={c.context} />
+          <CaseBlock label="Problem" body={c.problem} />
+          <div className="case-block">
+            <div className="cb-l"><span>Action</span><span className="cb-rule" /></div>
+            <ul className="case-actions">
+              {c.action.map((a, i) => (
+                <li key={i}><span className="ca-n">{String(i + 1).padStart(2, '0')}</span><span>{a}</span></li>
+              ))}
+            </ul>
+          </div>
+          <div className="case-block">
+            <div className="cb-l"><span>Result</span><span className="cb-rule" /></div>
+            <div className="case-results">
+              {c.result.map((r, i) => (
+                <CaseStat key={i} r={r} index={i} start={open && seen} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
+function CaseBlock({ label, body }) {
+  return (
+    <div className="case-block">
+      <div className="cb-l"><span>{label}</span><span className="cb-rule" /></div>
+      <p className="case-p">{body}</p>
+    </div>
+  );
+}
+function CaseStat({ r, index, start }) {
+  const num = parseInt(r.k.replace(/[^\d-]/g, ''), 10);
+  const isNumeric = !isNaN(num) && /^[−-]?\d+/.test(r.k.replace(/\s/g, ''));
+  const v = useCountUp(isNaN(num) ? 0 : Math.abs(num), start, 900 + index * 150);
+  const display = isNumeric ? (r.k.startsWith('−') || r.k.startsWith('-') ? '−' : '') + v : r.k;
+  return (
+    <div className="case-stat">
+      <div className="cs-num">{display}<span className="cs-suf">{r.s}</span></div>
+      <div className="cs-label">{r.v}</div>
+    </div>
+  );
+}
+function ExperienceSheet({ content }) {
+  return (
+    <section className="sheet" id="experience">
+      <SheetHeader kicker={content.experience.kicker} title={content.experience.title} />
+      <ol className="exp">
+        {content.experience.items.map((e, i) => (
+          <li key={i} className="exp-row">
+            <div className="exp-l">
+              <div className="exp-period">{e.period}</div>
+              <div className="exp-loc">{e.location}</div>
+            </div>
+            <div className="exp-c">
+              <div className="exp-org">{e.org}</div>
+              <div className="exp-role">{e.role}</div>
+            </div>
+            <ul className="exp-r">
+              {e.impact.map((im, j) => <li key={j}>{im}</li>)}
+            </ul>
+          </li>
+        ))}
+      </ol>
+      <RecosBlock content={content} />
+    </section>
+  );
+}
+function RecosBlock({ content }) {
+  return (
+    <div className="recos">
+      <SheetHeader kicker={content.recos.kicker} title={content.recos.title} />
+      <div className="recos-grid">
+        {content.recos.items.map((r, i) => (
+          <figure key={i} className="reco">
+            <div className="reco-head">
+              <div className="reco-id">REC.{String(i + 1).padStart(2, '0')}</div>
+              {r.context && <div className="reco-ctx">{r.context}</div>}
+            </div>
+            <blockquote>"{r.quote}"</blockquote>
+            <figcaption>
+              <div className="reco-name">{r.name}</div>
+              <div className="reco-role">{r.role}</div>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+function AboutSheet({ content }) {
+  return (
+    <section className="sheet" id="about">
+      <SheetHeader kicker={content.about.kicker} title={content.about.title} />
+      <div className="about-grid">
+        <div className="about-block"><div className="ab-l">NOW</div><p>{content.about.now}</p></div>
+        <div className="about-block"><div className="ab-l">NEXT</div><p>{content.about.next}</p></div>
+      </div>
+      <div className="principles">
+        <div className="col-h"><span>Principles</span><span className="col-rule" /></div>
+        <ul>
+          {content.about.principles.map((p, i) => (
+            <li key={i}>
+              <span className="p-num">P.{String(i + 1).padStart(2, '0')}</span>
+              <span className="p-k">{p.k}</span>
+              <span className="p-v">{p.v}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+function ContactSheet({ content }) {
+  return (
+    <section className="sheet" id="contact">
+      <SheetHeader kicker={content.contact.kicker} title={content.contact.title} />
+      <div className="contact">
+        <p className="contact-sub">{content.contact.sub}</p>
+        <div className="contact-grid">
+          {content.contact.links.map((l, i) => {
+            const isLink = !!l.href;
+            const Tag = isLink ? 'a' : 'div';
+            const props = isLink ? { href: l.href, target: '_blank', rel: 'noopener noreferrer' } : {};
+            return (
+              <Tag key={i} className={contact-row ${isLink ? 'is-link' : ''}} {...props}>
+                <span className="cr-id">CH.{String(i + 1).padStart(2, '0')}</span>
+                <span className="cr-k">{l.k}</span>
+                <span className="cr-v">{l.v}</span>
+                {isLink && <span className="cr-arrow">↗</span>}
+              </Tag>
+            );
+          })}
+        </div>
+        <div className="contact-avail">
+          <span className="ca-dot" />
+          <span>{content.contact.availability}</span>
+        </div>
+        <div className="signoff">
+          <div>— Martin Molet</div>
+          <div className="so-sub">{content.meta.role}</div>
+        </div>
+      </div>
+    </section>
+  );
+}
+function SheetHeader({ kicker, title, sub, small }) {
+  return (
+    <header className={sh ${small ? 'sh-sm' : ''}}>
+      <div className="sh-kicker">{kicker}</div>
+      {title && (
+        <h2 className="sh-title">
+          {title.split('\n').map((l, i) => <span key={i}>{l}</span>)}
+        </h2>
+      )}
+      {sub && <p className="sh-sub">{sub}</p>}
+    </header>
+  );
+}
+function PortfolioTweaks({ tweaks, setTweak }) {
+  const { TweaksPanel, TweakSection, TweakRadio, TweakSelect, TweakToggle } = window;
+  return (
+    <TweaksPanel title="Tweaks">
+      <TweakSection label="Visual">
+        <TweakSelect
+          label="accent"
+          value={tweaks.accent}
+          onChange={(v) => setTweak('accent', v)}
+          options={Object.entries(ACCENTS).map(([k, v]) => ({ value: k, label: v.label }))}
+        />
+        <TweakRadio
+          label="density"
+          value={tweaks.density}
+          onChange={(v) => setTweak('density', v)}
+          options={[{ value: 'comfortable', label: 'Comfy' }, { value: 'compact', label: 'Compact' }]}
+        />
+        <TweakRadio
+          label="type"
+          value={tweaks.typePair}
+          onChange={(v) => setTweak('typePair', v)}
+          options={[{ value: 'mono-only', label: 'Mono only' }, { value: 'serif-mono', label: 'Serif + mono' }]}
+        />
+      </TweakSection>
+      <TweakSection label="Blueprint">
+        <TweakToggle label="grid overlay" value={tweaks.grid} onChange={(v) => setTweak('grid', v)} />
+        <TweakToggle label="cursor crosshair" value={tweaks.crosshair} onChange={(v) => setTweak('crosshair', v)} />
+      </TweakSection>
+    </TweaksPanel>
+  );
+}
+function App() {
+  const [lang, setLang] = useState('fr');
+  const [tweaks, setTweak] = useTweaksLocal();
+  const content = window.CONTENT[lang];
+  const [sectionId, setSectionId] = useState('home');
+  const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const stageRef = useRef();
+  const accent = ACCENTS[tweaks.accent] || ACCENTS.cyan;
+  useEffect(() => {
+    document.documentElement.style.setProperty('--accent', accent.hex);
+    document.documentElement.style.setProperty('--accent-soft', accent.hex + '33');
+    document.documentElement.dataset.density = tweaks.density;
+    document.documentElement.dataset.grid = tweaks.grid ? 'on' : 'off';
+    document.documentElement.dataset.crosshair = tweaks.crosshair ? 'on' : 'off';
+    document.documentElement.dataset.typepair = tweaks.typePair;
+  }, [accent.hex, tweaks.density, tweaks.grid, tweaks.crosshair, tweaks.typePair]);
+  useEffect(() => {
+    const ids = ['home', 'cases', 'experience', 'contact'];
+    const els = ids.map(i => document.getElementById(i)).filter(Boolean);
+    const io = new IntersectionObserver((entries) => {
+      const visible = entries.filter(e => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setSectionId(visible.target.id);
+    }, { threshold: [0.25, 0.5, 0.75] });
+    els.forEach(e => io.observe(e));
+    return () => io.disconnect();
+  }, [lang]);
+  useEffect(() => {
+    const onMove = (e) => setMouse({ x: e.clientX, y: e.clientY });
+    window.addEventListener('mousemove', onMove);
+    return () => window.removeEventListener('mousemove', onMove);
+  }, []);
+  const onJump = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  return (
+    <div className="stage" ref={stageRef}>
+      {tweaks.grid && <div className="grid-bg" aria-hidden />}
+      {tweaks.crosshair && (
+        <>
+          <div className="cross-h" style={{ top: mouse.y }} aria-hidden />
+          <div className="cross-v" style={{ left: mouse.x }} aria-hidden />
+        </>
+      )}
+      <TopBar lang={lang} setLang={setLang} content={content} onJump={onJump} sectionId={sectionId} />
+      <main className="sheets">
+        <HomeSheet content={content} onJump={onJump} />
+        <CasesSheet content={content} />
+        <ExperienceSheet content={content} />
+        <ContactSheet content={content} />
+      </main>
+      <StatusBar content={content} sectionId={sectionId} />
+      <PortfolioTweaks tweaks={tweaks} setTweak={setTweak} />
+    </div>
+  );
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+</script>
+</body>
+</html>
+
+Afficher plus
+
+Processus de réflexion
+Processus de réflexion
+La photo est déjà corrigée dans ce fichier, c'est bien martin.jpg maintenant. Pour les liens des études de cas, tout dépend de ce qui est dans content.js. Peux-tu me partager ce fichier également ? C'est lui qui contient les detailUrl qui pointent vers sg.html, ecv.html, fdj.html.
+
+En attendant, je peux aussi vérifier directement — est-ce que quand tu cliques sur "Étude complète ↗" tu obtiens une erreur 404, ou le lien n'apparaît pas du tout ?
+
+voilà
+
+// Bilingual content store — Martin Molet, real CV.
+const CONTENT = {
+  en: {
+    nav: ['Index', 'Practices', 'Case studies', 'Experience', 'Contact'],
+    meta: {
+      role: 'Product Designer · Design System & Design Ops',
+      location: 'Marseille / Remote',
+      status: 'Open to CDI · Freelance available',
+      lastUpdated: 'Apr 2026',
+      filename: 'martin-molet.portfolio.v4',
+    },
+    home: {
+      kicker: '01 — Index',
+      title: 'I build the systems\nthat let design teams\nship faster.',
+      sub: '8+ years as a Product Designer, focused on design systems and design ops. From e-commerce to retail banking, I leave teams with a way of working — not just components.',
+      cta1: 'See case studies',
+      cta2: 'Get in touch',
+      metrics: [
+        { value: 40, suffix: '+', label: 'Designers trained on the Société Générale system', note: 'Workshops, open hours, tutorials and written guides — adoption, not push.' },
+        { value: 2, suffix: ' → 1', label: 'Design systems unified into a single library', note: 'Client + advisor systems merged, with dedicated modes. Less duplication, fewer drifts.' },
+        { value: 8, suffix: '+', label: 'Years shipping production design systems', note: '7 e-commerce sites, retail banking, mobile gaming, telecom subscriptions.' },
+      ],
+    },
+    work: {
+      kicker: '02 — Practices',
+      title: 'Four practices,\none operating model.',
+      sub: 'I treat design as infrastructure. Each practice below is a layer of that stack.',
+      sections: [
+        {
+          id: 'ds',
+          tag: 'A',
+          title: 'Design System',
+          oneLiner: 'A library is not a system. The system is the contract.',
+          method: [
+            'Audit the existing libraries — components, tokens, drift, debt',
+            'Define the contract : naming, structure, governance',
+            'Tokenize from the bottom up — primitives → semantic → component',
+            'Migrate in waves, never in big bangs',
+            'Measure adoption, not output',
+          ],
+          proof: [
+            { k: 'Figma rebuild', v: 'Société Générale libraries restructured for readability, maintainability and adoption.' },
+            { k: 'Variables & tokens', v: 'Desktop / mobile variants automated. Manual errors collapsed to near-zero.' },
+            { k: '2 → 1 systems', v: 'Client and advisor systems unified into one library with dedicated modes.' },
+          ],
+        },
+        {
+          id: 'ops',
+          tag: 'B',
+          title: 'Design Ops',
+          oneLiner: 'Make the right thing the easy thing.',
+          method: [
+            'Map the design lifecycle end-to-end',
+            'Find the friction — handoffs, reviews, naming, files',
+            'Standardize what should be standard, free what shouldn\'t',
+            'Document usage, rules and constraints — for designers and devs',
+            'Run open hours so the system stays a living conversation',
+          ],
+          proof: [
+            { k: 'Operational docs', v: 'Components documented with usage, rules and constraints — secured for both designers and devs.' },
+            { k: 'Workflow automation', v: 'Sketch → Figma migration at Orange, with a brand-new UI Kit.' },
+            { k: 'Multi-mode theming', v: 'Light / dark switch shipped on the FDJ mobile app, driven by tokens.' },
+          ],
+        },
+        {
+          id: 'ai',
+          tag: 'C',
+          title: 'Design AI',
+          oneLiner: 'No hype. Just leverage where the system already exists.',
+          method: [
+            'Use the design system as the AI\'s grammar',
+            'Automate the boring: docs, alt-text, changelogs',
+            'Augment review: flag drift, suggest tokens',
+            'Keep humans in every creative loop',
+          ],
+          proof: [
+            { k: 'Auto-documentation', v: 'Component props → MDX docs + usage examples, generated on each merge.' },
+            { k: 'Design assistant', v: 'In-Figma helper that maps freeform layers to existing tokens.' },
+            { k: 'System acceleration', v: 'New screens scaffolded from a brief in minutes, not hours.' },
+          ],
+        },
+        {
+          id: 'teach',
+          tag: 'D',
+          title: 'Teaching · Mentoring',
+          oneLiner: 'A system spreads through people, not files.',
+          method: [
+            'Workshops scoped by role, not seniority',
+            '1:1 mentoring on real product work',
+            'Public office hours for any designer',
+            'Document the why, not just the how',
+          ],
+          proof: [
+            { k: 'ECV Aix-en-Provence', v: 'Speaker session for M1 students on Atomic Design, variables, tokens, documentation, theming.' },
+            { k: '40+ designers trained', v: 'Workshops, open hours, tutorials and guides at Société Générale.' },
+            { k: 'Exercise: rebuild a component', v: 'Take a legacy button, return a token-driven, accessible, themed one.' },
+          ],
+        },
+      ],
+    },
+    cases: {
+      kicker: '03 — Case studies',
+      title: 'Three contexts,\nthree systems lived.',
+      items: [
+        {
+          id: 'sg',
+          detailUrl: 'cases/sg.html',
+          client: 'Société Générale × Devoteam',
+          role: 'Consultant Design System Manager',
+          period: 'Mar 2024 — Sep 2025',
+          summary: 'Rebuilt and unified the Figma libraries for retail banking — one source for client and advisor surfaces.',
+          context: 'Two parallel design systems — one for the client app, one for the advisor tooling. Drift was compounding. Designers spent more time aligning to spec than designing. Devs were rebuilding instead of reusing.',
+          problem: 'No shared contract. Libraries were duplicated, hard to navigate, hard to maintain. Adoption was uneven. No documented governance.',
+          action: [
+            'Restructured both Figma libraries for readability, maintainability and adoption',
+            'Set up variables and tokens to automate desktop / mobile variants',
+            'Unified client + advisor systems into a single library with dedicated modes',
+            'Wrote operational documentation : usage, rules, constraints — for designers and devs',
+            'Trained 40+ designers via workshops, open hours, tutorials and guides',
+          ],
+          result: [
+            { k: '40', s: '+', v: 'Designers trained on the new system' },
+            { k: '2 → 1', s: '', v: 'Design systems unified' },
+            { k: '0', s: '', v: 'Manual desktop/mobile drift remaining' },
+            { k: '18', s: ' mo', v: 'Mission length, four releases shipped' },
+          ],
+        },
+        {
+          id: 'ecv',
+          detailUrl: 'cases/ecv.html',
+          client: 'ECV Aix-en-Provence',
+          role: 'Speaker — Atomic & Design System',
+          period: 'Feb 2025 + Apr 2026 · 2 cohorts',
+          summary: 'Two workshops with Master 1 students on building and documenting a Design System from scratch.',
+          context: 'M1 students with good UI instincts but no mental models for system thinking. First real contact with Atomic Design, tokens, theming and governance.',
+          problem: 'Without solid frameworks for thinking at scale, coherence stays accidental. The risk: producing great screens without knowing how to go from 10 to 100 without breaking everything.',
+          action: [
+            'Taught Atomic Design fundamentals — atoms, molecules, organisms, templates, pages',
+            'Covered variables, token types (primitive, semantic, component) and naming conventions',
+            'Each student built a complete Figma library from color palette to templates',
+            'Hands-on sessions on modular decomposition and component reuse',
+            'Each student documented every component: usage, rules, constraints, variants',
+          ],
+          result: [
+            { k: '2', s: '', v: 'Consecutive years, two cohorts trained' },
+            { k: '14', s: '', v: 'M1 students trained end-to-end' },
+            { k: '14', s: '', v: 'Design systems documented and delivered' },
+            { k: '5', s: ' d', v: 'Intensive format, repeatable' },
+          ],
+        },
+        {
+          id: 'fdj',
+          detailUrl: 'cases/fdj.html',
+          client: 'Française des Jeux × Devoteam',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Jul 2022 — Dec 2023',
+          summary: 'Owned the mobile design system end-to-end — from contributor to referent — and shipped a token-driven light/dark mode.',
+          context: 'A mobile gaming app with a fragmented Figma library. Variants were maintained by hand. No theming contract. The same component existed in subtly different versions across screens.',
+          problem: 'Designers and developers were both slowed down. Visual consistency was a coin flip. Light/dark could not be shipped without a tokenized base.',
+          action: [
+            'Designed and improved core flows alongside system work',
+            'Took ownership of the mobile design system, first as a designer, then as referent',
+            'Rebuilt the Figma library — automated variants, tokens, light/dark switch',
+            'Held graphical consistency across the app and tooled the design + dev workflow',
+            'Worked alongside engineering and product to land components cleanly',
+          ],
+          result: [
+            { k: '1', s: '', v: 'Token-driven light/dark mode shipped' },
+            { k: '100', s: '%', v: 'Variants automated, no manual upkeep' },
+            { k: '17', s: ' mo', v: 'Mission, system referent role' },
+            { k: '1', s: '', v: 'Library, one source for the mobile app' },
+          ],
+        },
+      ],
+    },
+    experience: {
+      kicker: '04 — Experience',
+      title: 'Eight years,\nsix operating contexts.',
+      items: [
+        {
+          org: 'ECV Aix-en-Provence',
+          role: 'Speaker — Atomic & Design System',
+          period: 'Apr 2026',
+          location: 'Aix-en-Provence',
+          impact: [
+            'Workshop for M1 students on building and documenting a Design System',
+            'Atomic Design, variables, design tokens, documentation, theming',
+          ],
+        },
+        {
+          org: 'Société Générale × Devoteam',
+          role: 'Consultant Design System Manager',
+          period: 'Mar 2024 — Sep 2025',
+          location: 'Paris · Remote',
+          impact: [
+            'Restructured the Figma libraries for readability and maintainability',
+            'Unified client + advisor systems into one library with dedicated modes',
+            'Trained 40+ designers via workshops, open hours and written guides',
+          ],
+        },
+        {
+          org: 'ECV Aix-en-Provence',
+          role: 'Speaker — Atomic & Design System',
+          period: 'Feb 2025',
+          location: 'Aix-en-Provence',
+          impact: [
+            'New workshop session for M1 students — same topic, deeper hands-on',
+            'Atomic Design, variables, design tokens, documentation, theming',
+          ],
+        },
+        {
+          org: 'Française des Jeux × Devoteam',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Jul 2022 — Dec 2023',
+          location: 'Paris',
+          impact: [
+            'Owned the mobile design system, first as designer, then as referent',
+            'Rebuilt the Figma library — variants automation, tokens, light/dark switch',
+            'Held graphical consistency and tooled the design + dev workflow',
+          ],
+        },
+        {
+          org: 'Orange × Niji',
+          role: 'Consultant Product Designer',
+          period: 'Oct 2021 — Jun 2022',
+          location: 'Paris',
+          impact: [
+            'Reworked and simplified the subscription steps; ran user tests to validate',
+            'Migrated the team from Sketch to Figma',
+            'Built a new UI Kit aligned with the rebuilt flows',
+          ],
+        },
+        {
+          org: 'Funecap × Niji',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Apr 2021 — Sep 2021',
+          location: 'Paris',
+          impact: [
+            'Rebuilt the Figma library end-to-end',
+            'Held graphical consistency and tooled the design + dev workflow',
+          ],
+        },
+        {
+          org: 'Mister Menuiserie',
+          role: 'Product Designer · System Designer',
+          period: 'Mar 2018 — Feb 2021',
+          location: 'France',
+          impact: [
+            'Modernized and harmonized 7 e-commerce sites away from a hard-discount image',
+            'Built simple, effective product configurators',
+            'Set up a coherent design system across all 7 platforms',
+          ],
+        },
+      ],
+    },
+    recos: {
+      kicker: '05 — Recommendations',
+      title: 'What people who shipped with me said.',
+      items: [
+        {
+          quote: 'Martin played a central role in scaling AVENIR — Société Générale Retail Banking\'s Design System. His Figma library architecture, his support of designers and developers, and his ability to set and apply a clear short and long-term vision make him a very complete Design System Manager.',
+          name: 'Salomé M.',
+          role: 'Design Ops · Devoteam CreativeTech',
+        },
+        {
+          quote: 'Martin was essential to setting up the Design System at Société Générale. His Figma expertise let us roll out design tokens across every multi-theme component. The slot pattern he set up to automate responsive rendering massively improved designer throughput.',
+          name: 'Ivan T.',
+          role: 'Application Lead · Société Générale',
+        },
+        {
+          quote: 'It\'s thanks to Martin\'s relentless work that we shipped one of the most structuring DS projects: the token matrix. Today, we\'ve gained tremendous speed and flexibility in how we design components. Beyond the system work, Martin was always there to help and train Product Designers.',
+          name: 'Justine L.',
+          role: 'Design System Designer',
+        },
+        {
+          quote: 'Martin has a 360° view of design system rules, with exemplary rigor. His ability to structure, evolve and spread a coherent DS culture made the work of every Product Designer and dev team materially easier. Pragmatic, accessible, fast — I recommend him without hesitation.',
+          name: 'Marta M.',
+          role: 'Product Designer Manager · Upgrade',
+        },
+        {
+          quote: 'Working with Martin was as enjoyable as it was enriching. He brings calm, trust and positive momentum to a team. Beyond the technical chops, he\'s a teacher — always available to explain or unblock.',
+          name: 'Sarah S.',
+          role: 'Product Designer · Devoteam',
+        },
+        {
+          quote: 'Martin excels at managing design systems — it makes teamwork fluid and efficient. He has a real talent for rallying people and sharing ideas in an inspiring way. Technically he\'s top-tier, but what stands out is the human approach.',
+          name: 'Marc Q.',
+          role: 'Product Designer · FDJ',
+        },
+      ],
+    },
+    about: {
+      kicker: '06 — About',
+      title: 'How I work.',
+      now: 'Eight years as a Product Designer focused on systems. Last mission: Design System Manager at Société Générale via Devoteam. Speaker at ECV Aix-en-Provence on Atomic Design and tokens. Based near Marseille for the past two years, full-remote.',
+      next: 'Looking for a Lead Design System role, full-remote CDI, in a product team that takes systems seriously. Open to selected freelance work in parallel — system audit, rollout, ops setup.',
+      principles: [
+        { k: 'Systems beat heroics', v: 'A repeatable process beats a brilliant one-off.' },
+        { k: 'Measure or move on', v: 'If a system change has no metric, it isn\'t a change.' },
+        { k: 'Spread through people', v: 'Files don\'t adopt themselves. Designers do.' },
+        { k: 'Boring on purpose', v: 'Predictable surfaces buy you the budget for ambitious ones.' },
+      ],
+    },
+    contact: {
+      kicker: '06 — Contact',
+      title: 'Let\'s talk.',
+      sub: 'Best for: Lead Design System CDI (remote), or scoped freelance missions — system audit, rollout, ops setup.',
+      availability: 'Freelance availability — Q3 2026',
+      links: [
+        { k: 'LinkedIn', v: 'linkedin.com/in/mmolet', href: 'https://www.linkedin.com/in/mmolet' },
+        { k: 'Location', v: 'Marseille or remote' },
+      ],
+    },
+  },
+  fr: {
+    nav: ['Sommaire', 'Études de cas', 'Parcours', 'Contact'],
+    meta: {
+      role: 'Product Designer · Design System & Design Ops',
+      location: 'Marseille / Remote',
+      status: 'Ouvert au CDI · Freelance dispo',
+      lastUpdated: 'Avr. 2026',
+      filename: 'martin-molet.portfolio.v4',
+    },
+    home: {
+      kicker: '01 — Sommaire',
+      title: 'J\'aide les équipes à\nscale\nleur DS.',
+      sub: '8 ans de Product Design, spécialisé design system et design ops. De l\'e-commerce à la banque retail, je transmets aux équipes une façon de travailler — pas seulement des composants.',
+      cta1: 'Voir les études',
+      cta2: 'Me contacter',
+      metrics: [
+        { value: 40, suffix: '+', label: 'Designers formés sur le système Société Générale', note: 'Ateliers, open hours, tutoriels et guides écrits — de l\'adoption, pas de l\'imposition.' },
+        { value: 2, suffix: ' → 1', label: 'Design systems fusionnés en une seule librairie', note: 'Systèmes client + conseiller réunis, avec des modes dédiés. Moins de doublons, moins de dérive.' },
+        { value: 8, suffix: '+', label: 'Ans à livrer des systèmes en production', note: '7 sites e-commerce, banque retail, mobile gaming, souscription telecom.' },
+      ],
+    },
+    work: {
+      kicker: '02 — Practices',
+      title: 'Quatre practices,\nun seul modèle opérationnel.',
+      sub: 'Je traite le design comme une infrastructure. Chaque practice est une couche de cette pile.',
+      sections: [
+        {
+          id: 'ds',
+          tag: 'A',
+          title: 'Design System',
+          oneLiner: 'Une librairie, ce n\'est pas un système. Le système, c\'est le contrat.',
+          method: [
+            'Auditer les librairies existantes — composants, tokens, dérives, dette',
+            'Définir le contrat — nommage, structure, gouvernance',
+            'Tokeniser par le bas — primitives → sémantique → composant',
+            'Migrer par vagues, jamais d\'un seul bloc',
+            'Mesurer l\'adoption, pas la production',
+          ],
+          proof: [
+            { k: 'Refonte Figma', v: 'Librairies Société Générale restructurées pour la lisibilité, la maintenabilité et l\'adoption.' },
+            { k: 'Variables & tokens', v: 'Déclinaisons desktop / mobile automatisées. Les erreurs manuelles tombent à zéro.' },
+            { k: '2 → 1 système', v: 'Systèmes client et conseiller réunis en une seule librairie avec modes dédiés.' },
+          ],
+        },
+        {
+          id: 'ops',
+          tag: 'B',
+          title: 'Design Ops',
+          oneLiner: 'Le bon chemin doit être le chemin naturel.',
+          method: [
+            'Cartographier le cycle design de bout en bout',
+            'Repérer les frictions — handoffs, revues, nommage, fichiers',
+            'Standardiser ce qui doit l\'être, laisser de la liberté sur le reste',
+            'Documenter usages, règles et contraintes — pour designers et devs',
+            'Animer des open hours pour que le système reste une conversation vivante',
+          ],
+          proof: [
+            { k: 'Documentation opérationnelle', v: 'Composants documentés avec usages, règles et contraintes — sécurisés pour designers et développeurs.' },
+            { k: 'Automatisation des workflows', v: 'Migration Sketch → Figma chez Orange, avec un UI Kit entièrement refait.' },
+            { k: 'Theming multi-modes', v: 'Switch light / dark livré sur l\'app mobile FDJ, piloté par tokens.' },
+          ],
+        },
+        {
+          id: 'ai',
+          tag: 'C',
+          title: 'Design AI',
+          oneLiner: 'Pas de hype. Du levier là où le système existe déjà.',
+          method: [
+            'Utiliser le design system comme grammaire de l\'IA',
+            'Automatiser ce qui est répétitif : docs, alt-text, changelogs',
+            'Outiller le review : détecter les dérives, proposer des tokens',
+            'Garder l\'humain dans chaque boucle créative',
+          ],
+          proof: [
+            { k: 'Auto-documentation', v: 'Props → MDX + exemples d\'usage, générés à chaque merge.' },
+            { k: 'Assistant design', v: 'Helper Figma qui associe les calques libres aux tokens existants.' },
+            { k: 'Génération accélérée', v: 'Des écrans complets depuis un brief — en quelques minutes, pas en heures.' },
+          ],
+        },
+        {
+          id: 'teach',
+          tag: 'D',
+          title: 'Transmission · Mentorat',
+          oneLiner: 'Un système se transmet par les gens, pas par les fichiers.',
+          method: [
+            'Workshops calés sur le rôle, pas sur le niveau',
+            'Mentorat 1:1 sur du vrai produit',
+            'Open hours ouvertes à tous les designers',
+            'Documenter le pourquoi, pas seulement le comment',
+          ],
+          proof: [
+            { k: 'ECV Aix-en-Provence', v: 'Atelier M1 — Atomic Design, variables, tokens, documentation, theming.' },
+            { k: '40+ designers formés', v: 'Ateliers, open hours, tutoriels et guides écrits chez Société Générale.' },
+            { k: 'Exercice fil rouge', v: 'Reprendre un bouton legacy et le rendre token-driven, accessible, thémé.' },
+          ],
+        },
+      ],
+    },
+    cases: {
+      kicker: '03 — Études de cas',
+      title: '3 environements.',
+      items: [
+        {
+          id: 'sg',
+          detailUrl: 'cases/sg.html',
+          client: 'Société Générale × Devoteam',
+          role: 'Consultant Design System Manager',
+          period: 'Mars 2024 — Sept. 2025',
+          summary: 'Refonte et unification des librairies Figma pour la banque retail — une source unique pour le client et le conseiller.',
+          context: 'Deux design systems en parallèle — un pour l\'app client, un pour l\'outillage conseiller. La dérive s\'accumulait. Les designers passaient plus de temps à se recaler sur les specs qu\'à concevoir. Les devs reconstruisaient des composants au lieu de les réutiliser.',
+          problem: 'Pas de contrat partagé. Des librairies dupliquées, difficiles à naviguer et à maintenir. Une adoption inégale selon les équipes. Aucune gouvernance documentée.',
+          action: [
+            'Réorganisation des librairies Figma — classement alphabétique aligné sur Storybook',
+            '280+ tokens de taille et 230+ tokens de couleur — une librairie, plusieurs modes',
+            'Fusion des systèmes client + conseiller en une seule librairie thématisée',
+            'Refonte de 25+ composants et reconstruction de 30+ icônes — slots, variables, variants rationalisés',
+            'Formation de 40+ designers via ateliers, open hours, tutoriels et guides écrits',
+          ],
+          result: [
+            { k: '40', s: '+', v: 'Designers formés au nouveau système' },
+            { k: '280', s: '+', v: 'Tokens de taille — source unique de vérité' },
+            { k: '230', s: '+', v: 'Tokens de couleur sur deux modes thématisés' },
+            { k: '4×', s: '', v: 'Déclinaison d\'écrans plus rapide' },
+          ],
+        },
+        {
+          id: 'ecv',
+          detailUrl: 'cases/ecv.html',
+          client: 'ECV Aix-en-Provence',
+          role: 'Intervenant — Atomic & Design System',
+          period: 'Févr. 2025 + Avr. 2026 · 2 promotions',
+          summary: 'Deux ateliers avec des étudiants Master 1 pour apprendre à concevoir et documenter un Design System de A à Z.',
+          context: 'Étudiants M1 avec un bon instinct UI mais sans modèles mentaux pour penser à l\'échelle système. Premier vrai contact avec l\'Atomic Design, les tokens, le theming et la gouvernance.',
+          problem: 'Sans bases solides pour penser système, la cohérence reste un accident. Le risque : produire de beaux écrans sans savoir passer de 10 à 100 sans tout casser.',
+          action: [
+            'Fondamentaux de l\'Atomic Design — atoms, molecules, organisms, templates, pages',
+            'Variables, types de tokens (primitive, sémantique, composant) et nommage',
+            'Chaque étudiant construit une librairie Figma complète — de la palette aux templates',
+            'Ateliers pratiques sur la décomposition modulaire et la réutilisation',
+            'Chaque étudiant documente ses composants — usages, règles, contraintes, variantes',
+          ],
+          result: [
+            { k: '2', s: '', v: 'Années consécutives, deux promotions formées' },
+            { k: '14', s: '', v: 'Étudiants M1 formés de bout en bout' },
+            { k: '14', s: '', v: 'Design systems documentés et livrés' },
+            { k: '5', s: ' j', v: 'Format intensif, reproductible' },
+          ],
+        },
+        {
+          id: 'fdj',
+          detailUrl: 'cases/fdj.html',
+          client: 'Française des Jeux × Devoteam',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Juil. 2022 — Déc. 2023',
+          summary: 'Prise en main du design system mobile de bout en bout — de contributeur à référent — avec un mode light/dark piloté par tokens.',
+          context: 'Une app mobile gaming avec une librairie Figma morcelée. Les variantes étaient maintenues à la main. Aucun contrat de thème. Le même composant existait en plusieurs versions légèrement différentes selon les écrans.',
+          problem: 'Designers et développeurs ralentis. La cohérence visuelle était aléatoire. Impossible de livrer le light/dark sans base tokenisée.',
+          action: [
+            'Concevoir et améliorer les parcours en parallèle du travail système',
+            'Prendre en main le design system mobile — d\'abord designer, puis référent',
+            'Refonte complète de la librairie Figma — variantes automatisées, tokens, switch light/dark',
+            'Tenir la cohérence graphique sur l\'ensemble de l\'app et outiller le workflow design + dev',
+            'Travailler avec les équipes eng et produit pour intégrer les composants proprement',
+          ],
+          result: [
+            { k: '1', s: '', v: 'Mode light/dark piloté par tokens livré en production' },
+            { k: '100', s: '%', v: 'Variantes automatisées, zéro maintenance manuelle' },
+            { k: '17', s: ' mois', v: 'Mission, dont le rôle de référent système' },
+            { k: '1', s: '', v: 'Librairie unique — une source pour toute l\'app' },
+          ],
+        },
+      ],
+    },
+    experience: {
+      kicker: '04 — Parcours',
+      title: 'Huit ans,\nsix contextes.',
+      items: [
+        {
+          org: 'ECV Aix-en-Provence',
+          role: 'Intervenant — Atomic & Design System',
+          period: 'Avr. 2026',
+          location: 'Aix-en-Provence',
+          impact: [
+            'Atelier M1 pour la deuxième années consécutive sur la conception et la documentation d\'un Design System',
+            'Atomic Design, variables, design tokens, documentation Supernova, theming',
+          ],
+        },
+        {
+          org: 'Société Générale × Devoteam',
+          role: 'Consultant Design System Manager',
+          period: 'Mars 2024 — Sept. 2025',
+          location: 'Paris · Remote',
+          impact: [
+            'Restructuration des librairies Figma — lisibilité, maintenabilité, adoption',
+            'Fusion des systèmes client + conseiller en une librairie avec modes dédiés',
+            '40+ designers formés via ateliers, open hours et guides écrits',
+          ],
+        },
+        {
+          org: 'ECV Aix-en-Provence',
+          role: 'Intervenant — Atomic & Design System',
+          period: 'Févr. 2025',
+          location: 'Aix-en-Provence',
+          impact: [
+            'Atelier M1 sur la conception et la documentation d\'un Design System',
+            'Atomic Design, variables, design tokens, documentation Zeroheight, theming',
+          ],
+        },
+        {
+          org: 'Française des Jeux × Devoteam',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Juil. 2022 — Déc. 2023',
+          location: 'Paris',
+          impact: [
+            'En charge du design system mobile — d\'abord designer, puis référent',
+            'Refonte Figma — variantes automatisées, tokens, switch light/dark',
+            'Cohérence graphique tenue sur l\'app, workflow design + dev outillé',
+          ],
+        },
+        {
+          org: 'Orange × Niji',
+          role: 'Consultant Product Designer',
+          period: 'Oct. 2021 — Juin 2022',
+          location: 'Paris',
+          impact: [
+            'Refonte et simplification des parcours de souscription, validés par tests utilisateurs',
+            'Migration de l\'équipe de Sketch vers Figma',
+            'Création d\'un nouveau UI Kit aligné sur les parcours refondus',
+          ],
+        },
+        {
+          org: 'Funecap × Niji',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Avr. 2021 — Sept. 2021',
+          location: 'Paris',
+          impact: [
+            'Refonte complète de la librairie Figma de zéro',
+            'Cohérence graphique tenue sur l\'ensemble des écrans, workflow design + dev outillé',
+          ],
+        },
+        {
+          org: 'Mister Menuiserie',
+          role: 'Product Designer · System Designer',
+          period: 'Mars 2018 — Févr. 2021',
+          location: 'France',
+          impact: [
+            'Modernisation et harmonisation de 7 sites e-commerce — sortie de l\'image hard-discount',
+            'Conception de configurateurs produits simples et efficaces',
+            'Mise en place d\'un design system cohérent sur les 7 plateformes',
+          ],
+        },
+      ],
+    },
+    recos: {
+      kicker: '05 — Recommandations',
+      title: 'On a travaillé ensemble.',
+      items: [
+        {
+          quote: 'Martin a eu un rôle central dans le passage à l\'échelle du Design System AVENIR de la Banque de Détails de la Société Générale. Son expertise sur l\'architecture Figma, son accompagnement des Product Designers et développeurs, et sa capacité à appliquer une vision claire à court et long terme en font un Design System Manager très complet.',
+          name: 'Salomé M.',
+          role: 'Design Ops Manager · SG x Devoteam',
+        },
+        {
+          quote: 'Martin a eu un rôle essentiel dans la mise en place du Design System à la Société Générale. Son expertise Figma nous a permis de déployer les design tokens sur l\'ensemble des composants multi-thèmes. La mise en place de slots pour automatiser le rendu responsive a grandement facilité la production des designers.',
+          name: 'Ivan T.',
+          role: 'Responsable d\'application · SG',
+        },
+        {
+          quote: 'C\'est grâce au travail acharné de Martin que nous avons pu lancer l\'un des projets les plus structurants du DS : la matrice de tokens. On y a énormément gagné en rapidité et en flexibilité sur la conception des composants. Au-delà du système, Martin a toujours été présent pour aider et former les Product Designers.',
+          name: 'Justine L.',
+          role: 'Design System Designer · SG x Devoteam',
+        },
+        {
+          quote: 'Martin possède une vision 360° des règles design system, avec une rigueur exemplaire. Sa capacité à structurer, faire évoluer et diffuser une culture DS cohérente a considérablement facilité le travail des Product Designers et des équipes dev. Pragmatique, accessible, rapide — je le recommande sans hésitation.',
+          name: 'Marta M.',
+          role: 'Product Designer Manager · SG x Upgrade',
+        },
+        {
+          quote: 'Travailler avec Martin a été aussi agréable qu\'enrichissant. Il apporte de la sérénité, de la confiance et une dynamique positive à toute l\'équipe. Au-delà des compétences techniques, c\'est un pédagogue — toujours disponible pour expliquer ou débloquer.',
+          name: 'Sarah S.',
+          role: 'Product Designer · SG x Devoteam',
+        },
+        {
+          quote: 'Martin excelle dans la gestion des design systems, ce qui rend le travail d\'équipe fluide et efficace. Il a un vrai talent pour rassembler et partager ses idées de manière inspirante. Techniquement au top, mais ce qui le distingue, c\'est l\'approche humaine.',
+          name: 'Marc Q.',
+          role: 'Product Designer · FDJ x Devoteam',
+        },
+      ],
+    },
+    contact: {
+      kicker: '06 — Contact',
+      title: 'Contact.',
+      sub: 'Idéal : poste de Lead Design System CDI (remote) ou mission freelance ciblée — audit système, déploiement, structuration des ops.',
+      availability: 'Disponibilité freelance — ASAP',
+      links: [
+        { k: 'LinkedIn', v: 'linkedin.com/in/mmolet', href: 'https://www.linkedin.com/in/mmolet' },
+        { k: 'Localisation', v: 'Marseille ou remote' },
+      ],
+    },
+  },
+};
+window.CONTENT = CONTENT;
+
+Afficher plus
+
+Processus de réflexion
+Processus de réflexion
+Trouvé ! Le problème est dans content.js. Les liens pointent vers un dossier cases/ qui n'existe pas sur GitHub :
+
+js
+detailUrl: 'cases/sg.html'   // ❌ cherche un dossier "cases/"
+detailUrl: 'cases/ecv.html'  // ❌
+detailUrl: 'cases/fdj.html'  // ❌
+Mais tes fichiers sg.html, ecv.html, fdj.html sont directement à la racine du repo.
+
+La correction est simple — modifie content.js sur GitHub :
+
+Dans ton repo, clique sur content.js → ✏️ Edit
+Fais Ctrl+H pour chercher/remplacer
+Cherche : cases/
+Remplace par : (rien, laisse vide)
+Ça transformera automatiquement les 3 liens (en anglais et en français) en sg.html, ecv.html, fdj.html
+Commit changes
+Il y a 6 occurrences de cases/ à remplacer (3 en anglais + 3 en français). Le remplacement global les corrigera toutes d'un coup.
+
+Attends 1-2 minutes et les liens vers les études de cas devraient fonctionner.
+
+regarde 
+
+// Bilingual content store — Martin Molet, real CV.
+const CONTENT = {
+  en: {
+    nav: ['Index', 'Practices', 'Case studies', 'Experience', 'Contact'],
+    meta: {
+      role: 'Product Designer · Design System & Design Ops',
+      location: 'Marseille / Remote',
+      status: 'Open to CDI · Freelance available',
+      lastUpdated: 'Apr 2026',
+      filename: 'martin-molet.portfolio.v4',
+    },
+    home: {
+      kicker: '01 — Index',
+      title: 'I build the systems\nthat let design teams\nship faster.',
+      sub: '8+ years as a Product Designer, focused on design systems and design ops. From e-commerce to retail banking, I leave teams with a way of working — not just components.',
+      cta1: 'See case studies',
+      cta2: 'Get in touch',
+      metrics: [
+        { value: 40, suffix: '+', label: 'Designers trained on the Société Générale system', note: 'Workshops, open hours, tutorials and written guides — adoption, not push.' },
+        { value: 2, suffix: ' → 1', label: 'Design systems unified into a single library', note: 'Client + advisor systems merged, with dedicated modes. Less duplication, fewer drifts.' },
+        { value: 8, suffix: '+', label: 'Years shipping production design systems', note: '7 e-commerce sites, retail banking, mobile gaming, telecom subscriptions.' },
+      ],
+    },
+    work: {
+      kicker: '02 — Practices',
+      title: 'Four practices,\none operating model.',
+      sub: 'I treat design as infrastructure. Each practice below is a layer of that stack.',
+      sections: [
+        {
+          id: 'ds',
+          tag: 'A',
+          title: 'Design System',
+          oneLiner: 'A library is not a system. The system is the contract.',
+          method: [
+            'Audit the existing libraries — components, tokens, drift, debt',
+            'Define the contract : naming, structure, governance',
+            'Tokenize from the bottom up — primitives → semantic → component',
+            'Migrate in waves, never in big bangs',
+            'Measure adoption, not output',
+          ],
+          proof: [
+            { k: 'Figma rebuild', v: 'Société Générale libraries restructured for readability, maintainability and adoption.' },
+            { k: 'Variables & tokens', v: 'Desktop / mobile variants automated. Manual errors collapsed to near-zero.' },
+            { k: '2 → 1 systems', v: 'Client and advisor systems unified into one library with dedicated modes.' },
+          ],
+        },
+        {
+          id: 'ops',
+          tag: 'B',
+          title: 'Design Ops',
+          oneLiner: 'Make the right thing the easy thing.',
+          method: [
+            'Map the design lifecycle end-to-end',
+            'Find the friction — handoffs, reviews, naming, files',
+            'Standardize what should be standard, free what shouldn\'t',
+            'Document usage, rules and constraints — for designers and devs',
+            'Run open hours so the system stays a living conversation',
+          ],
+          proof: [
+            { k: 'Operational docs', v: 'Components documented with usage, rules and constraints — secured for both designers and devs.' },
+            { k: 'Workflow automation', v: 'Sketch → Figma migration at Orange, with a brand-new UI Kit.' },
+            { k: 'Multi-mode theming', v: 'Light / dark switch shipped on the FDJ mobile app, driven by tokens.' },
+          ],
+        },
+        {
+          id: 'ai',
+          tag: 'C',
+          title: 'Design AI',
+          oneLiner: 'No hype. Just leverage where the system already exists.',
+          method: [
+            'Use the design system as the AI\'s grammar',
+            'Automate the boring: docs, alt-text, changelogs',
+            'Augment review: flag drift, suggest tokens',
+            'Keep humans in every creative loop',
+          ],
+          proof: [
+            { k: 'Auto-documentation', v: 'Component props → MDX docs + usage examples, generated on each merge.' },
+            { k: 'Design assistant', v: 'In-Figma helper that maps freeform layers to existing tokens.' },
+            { k: 'System acceleration', v: 'New screens scaffolded from a brief in minutes, not hours.' },
+          ],
+        },
+        {
+          id: 'teach',
+          tag: 'D',
+          title: 'Teaching · Mentoring',
+          oneLiner: 'A system spreads through people, not files.',
+          method: [
+            'Workshops scoped by role, not seniority',
+            '1:1 mentoring on real product work',
+            'Public office hours for any designer',
+            'Document the why, not just the how',
+          ],
+          proof: [
+            { k: 'ECV Aix-en-Provence', v: 'Speaker session for M1 students on Atomic Design, variables, tokens, documentation, theming.' },
+            { k: '40+ designers trained', v: 'Workshops, open hours, tutorials and guides at Société Générale.' },
+            { k: 'Exercise: rebuild a component', v: 'Take a legacy button, return a token-driven, accessible, themed one.' },
+          ],
+        },
+      ],
+    },
+    cases: {
+      kicker: '03 — Case studies',
+      title: 'Three contexts,\nthree systems lived.',
+      items: [
+        {
+          id: 'sg',
+          detailUrl: 'cases/sg.html',
+          client: 'Société Générale × Devoteam',
+          role: 'Consultant Design System Manager',
+          period: 'Mar 2024 — Sep 2025',
+          summary: 'Rebuilt and unified the Figma libraries for retail banking — one source for client and advisor surfaces.',
+          context: 'Two parallel design systems — one for the client app, one for the advisor tooling. Drift was compounding. Designers spent more time aligning to spec than designing. Devs were rebuilding instead of reusing.',
+          problem: 'No shared contract. Libraries were duplicated, hard to navigate, hard to maintain. Adoption was uneven. No documented governance.',
+          action: [
+            'Restructured both Figma libraries for readability, maintainability and adoption',
+            'Set up variables and tokens to automate desktop / mobile variants',
+            'Unified client + advisor systems into a single library with dedicated modes',
+            'Wrote operational documentation : usage, rules, constraints — for designers and devs',
+            'Trained 40+ designers via workshops, open hours, tutorials and guides',
+          ],
+          result: [
+            { k: '40', s: '+', v: 'Designers trained on the new system' },
+            { k: '2 → 1', s: '', v: 'Design systems unified' },
+            { k: '0', s: '', v: 'Manual desktop/mobile drift remaining' },
+            { k: '18', s: ' mo', v: 'Mission length, four releases shipped' },
+          ],
+        },
+        {
+          id: 'ecv',
+          detailUrl: 'cases/ecv.html',
+          client: 'ECV Aix-en-Provence',
+          role: 'Speaker — Atomic & Design System',
+          period: 'Feb 2025 + Apr 2026 · 2 cohorts',
+          summary: 'Two workshops with Master 1 students on building and documenting a Design System from scratch.',
+          context: 'M1 students with good UI instincts but no mental models for system thinking. First real contact with Atomic Design, tokens, theming and governance.',
+          problem: 'Without solid frameworks for thinking at scale, coherence stays accidental. The risk: producing great screens without knowing how to go from 10 to 100 without breaking everything.',
+          action: [
+            'Taught Atomic Design fundamentals — atoms, molecules, organisms, templates, pages',
+            'Covered variables, token types (primitive, semantic, component) and naming conventions',
+            'Each student built a complete Figma library from color palette to templates',
+            'Hands-on sessions on modular decomposition and component reuse',
+            'Each student documented every component: usage, rules, constraints, variants',
+          ],
+          result: [
+            { k: '2', s: '', v: 'Consecutive years, two cohorts trained' },
+            { k: '14', s: '', v: 'M1 students trained end-to-end' },
+            { k: '14', s: '', v: 'Design systems documented and delivered' },
+            { k: '5', s: ' d', v: 'Intensive format, repeatable' },
+          ],
+        },
+        {
+          id: 'fdj',
+          detailUrl: 'cases/fdj.html',
+          client: 'Française des Jeux × Devoteam',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Jul 2022 — Dec 2023',
+          summary: 'Owned the mobile design system end-to-end — from contributor to referent — and shipped a token-driven light/dark mode.',
+          context: 'A mobile gaming app with a fragmented Figma library. Variants were maintained by hand. No theming contract. The same component existed in subtly different versions across screens.',
+          problem: 'Designers and developers were both slowed down. Visual consistency was a coin flip. Light/dark could not be shipped without a tokenized base.',
+          action: [
+            'Designed and improved core flows alongside system work',
+            'Took ownership of the mobile design system, first as a designer, then as referent',
+            'Rebuilt the Figma library — automated variants, tokens, light/dark switch',
+            'Held graphical consistency across the app and tooled the design + dev workflow',
+            'Worked alongside engineering and product to land components cleanly',
+          ],
+          result: [
+            { k: '1', s: '', v: 'Token-driven light/dark mode shipped' },
+            { k: '100', s: '%', v: 'Variants automated, no manual upkeep' },
+            { k: '17', s: ' mo', v: 'Mission, system referent role' },
+            { k: '1', s: '', v: 'Library, one source for the mobile app' },
+          ],
+        },
+      ],
+    },
+    experience: {
+      kicker: '04 — Experience',
+      title: 'Eight years,\nsix operating contexts.',
+      items: [
+        {
+          org: 'ECV Aix-en-Provence',
+          role: 'Speaker — Atomic & Design System',
+          period: 'Apr 2026',
+          location: 'Aix-en-Provence',
+          impact: [
+            'Workshop for M1 students on building and documenting a Design System',
+            'Atomic Design, variables, design tokens, documentation, theming',
+          ],
+        },
+        {
+          org: 'Société Générale × Devoteam',
+          role: 'Consultant Design System Manager',
+          period: 'Mar 2024 — Sep 2025',
+          location: 'Paris · Remote',
+          impact: [
+            'Restructured the Figma libraries for readability and maintainability',
+            'Unified client + advisor systems into one library with dedicated modes',
+            'Trained 40+ designers via workshops, open hours and written guides',
+          ],
+        },
+        {
+          org: 'ECV Aix-en-Provence',
+          role: 'Speaker — Atomic & Design System',
+          period: 'Feb 2025',
+          location: 'Aix-en-Provence',
+          impact: [
+            'New workshop session for M1 students — same topic, deeper hands-on',
+            'Atomic Design, variables, design tokens, documentation, theming',
+          ],
+        },
+        {
+          org: 'Française des Jeux × Devoteam',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Jul 2022 — Dec 2023',
+          location: 'Paris',
+          impact: [
+            'Owned the mobile design system, first as designer, then as referent',
+            'Rebuilt the Figma library — variants automation, tokens, light/dark switch',
+            'Held graphical consistency and tooled the design + dev workflow',
+          ],
+        },
+        {
+          org: 'Orange × Niji',
+          role: 'Consultant Product Designer',
+          period: 'Oct 2021 — Jun 2022',
+          location: 'Paris',
+          impact: [
+            'Reworked and simplified the subscription steps; ran user tests to validate',
+            'Migrated the team from Sketch to Figma',
+            'Built a new UI Kit aligned with the rebuilt flows',
+          ],
+        },
+        {
+          org: 'Funecap × Niji',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Apr 2021 — Sep 2021',
+          location: 'Paris',
+          impact: [
+            'Rebuilt the Figma library end-to-end',
+            'Held graphical consistency and tooled the design + dev workflow',
+          ],
+        },
+        {
+          org: 'Mister Menuiserie',
+          role: 'Product Designer · System Designer',
+          period: 'Mar 2018 — Feb 2021',
+          location: 'France',
+          impact: [
+            'Modernized and harmonized 7 e-commerce sites away from a hard-discount image',
+            'Built simple, effective product configurators',
+            'Set up a coherent design system across all 7 platforms',
+          ],
+        },
+      ],
+    },
+    recos: {
+      kicker: '05 — Recommendations',
+      title: 'What people who shipped with me said.',
+      items: [
+        {
+          quote: 'Martin played a central role in scaling AVENIR — Société Générale Retail Banking\'s Design System. His Figma library architecture, his support of designers and developers, and his ability to set and apply a clear short and long-term vision make him a very complete Design System Manager.',
+          name: 'Salomé M.',
+          role: 'Design Ops · Devoteam CreativeTech',
+        },
+        {
+          quote: 'Martin was essential to setting up the Design System at Société Générale. His Figma expertise let us roll out design tokens across every multi-theme component. The slot pattern he set up to automate responsive rendering massively improved designer throughput.',
+          name: 'Ivan T.',
+          role: 'Application Lead · Société Générale',
+        },
+        {
+          quote: 'It\'s thanks to Martin\'s relentless work that we shipped one of the most structuring DS projects: the token matrix. Today, we\'ve gained tremendous speed and flexibility in how we design components. Beyond the system work, Martin was always there to help and train Product Designers.',
+          name: 'Justine L.',
+          role: 'Design System Designer',
+        },
+        {
+          quote: 'Martin has a 360° view of design system rules, with exemplary rigor. His ability to structure, evolve and spread a coherent DS culture made the work of every Product Designer and dev team materially easier. Pragmatic, accessible, fast — I recommend him without hesitation.',
+          name: 'Marta M.',
+          role: 'Product Designer Manager · Upgrade',
+        },
+        {
+          quote: 'Working with Martin was as enjoyable as it was enriching. He brings calm, trust and positive momentum to a team. Beyond the technical chops, he\'s a teacher — always available to explain or unblock.',
+          name: 'Sarah S.',
+          role: 'Product Designer · Devoteam',
+        },
+        {
+          quote: 'Martin excels at managing design systems — it makes teamwork fluid and efficient. He has a real talent for rallying people and sharing ideas in an inspiring way. Technically he\'s top-tier, but what stands out is the human approach.',
+          name: 'Marc Q.',
+          role: 'Product Designer · FDJ',
+        },
+      ],
+    },
+    about: {
+      kicker: '06 — About',
+      title: 'How I work.',
+      now: 'Eight years as a Product Designer focused on systems. Last mission: Design System Manager at Société Générale via Devoteam. Speaker at ECV Aix-en-Provence on Atomic Design and tokens. Based near Marseille for the past two years, full-remote.',
+      next: 'Looking for a Lead Design System role, full-remote CDI, in a product team that takes systems seriously. Open to selected freelance work in parallel — system audit, rollout, ops setup.',
+      principles: [
+        { k: 'Systems beat heroics', v: 'A repeatable process beats a brilliant one-off.' },
+        { k: 'Measure or move on', v: 'If a system change has no metric, it isn\'t a change.' },
+        { k: 'Spread through people', v: 'Files don\'t adopt themselves. Designers do.' },
+        { k: 'Boring on purpose', v: 'Predictable surfaces buy you the budget for ambitious ones.' },
+      ],
+    },
+    contact: {
+      kicker: '06 — Contact',
+      title: 'Let\'s talk.',
+      sub: 'Best for: Lead Design System CDI (remote), or scoped freelance missions — system audit, rollout, ops setup.',
+      availability: 'Freelance availability — Q3 2026',
+      links: [
+        { k: 'LinkedIn', v: 'linkedin.com/in/mmolet', href: 'https://www.linkedin.com/in/mmolet' },
+        { k: 'Location', v: 'Marseille or remote' },
+      ],
+    },
+  },
+  fr: {
+    nav: ['Sommaire', 'Études de cas', 'Parcours', 'Contact'],
+    meta: {
+      role: 'Product Designer · Design System & Design Ops',
+      location: 'Marseille / Remote',
+      status: 'Ouvert au CDI · Freelance dispo',
+      lastUpdated: 'Avr. 2026',
+      filename: 'martin-molet.portfolio.v4',
+    },
+    home: {
+      kicker: '01 — Sommaire',
+      title: 'J\'aide les équipes à\nscale\nleur DS.',
+      sub: '8 ans de Product Design, spécialisé design system et design ops. De l\'e-commerce à la banque retail, je transmets aux équipes une façon de travailler — pas seulement des composants.',
+      cta1: 'Voir les études',
+      cta2: 'Me contacter',
+      metrics: [
+        { value: 40, suffix: '+', label: 'Designers formés sur le système Société Générale', note: 'Ateliers, open hours, tutoriels et guides écrits — de l\'adoption, pas de l\'imposition.' },
+        { value: 2, suffix: ' → 1', label: 'Design systems fusionnés en une seule librairie', note: 'Systèmes client + conseiller réunis, avec des modes dédiés. Moins de doublons, moins de dérive.' },
+        { value: 8, suffix: '+', label: 'Ans à livrer des systèmes en production', note: '7 sites e-commerce, banque retail, mobile gaming, souscription telecom.' },
+      ],
+    },
+    work: {
+      kicker: '02 — Practices',
+      title: 'Quatre practices,\nun seul modèle opérationnel.',
+      sub: 'Je traite le design comme une infrastructure. Chaque practice est une couche de cette pile.',
+      sections: [
+        {
+          id: 'ds',
+          tag: 'A',
+          title: 'Design System',
+          oneLiner: 'Une librairie, ce n\'est pas un système. Le système, c\'est le contrat.',
+          method: [
+            'Auditer les librairies existantes — composants, tokens, dérives, dette',
+            'Définir le contrat — nommage, structure, gouvernance',
+            'Tokeniser par le bas — primitives → sémantique → composant',
+            'Migrer par vagues, jamais d\'un seul bloc',
+            'Mesurer l\'adoption, pas la production',
+          ],
+          proof: [
+            { k: 'Refonte Figma', v: 'Librairies Société Générale restructurées pour la lisibilité, la maintenabilité et l\'adoption.' },
+            { k: 'Variables & tokens', v: 'Déclinaisons desktop / mobile automatisées. Les erreurs manuelles tombent à zéro.' },
+            { k: '2 → 1 système', v: 'Systèmes client et conseiller réunis en une seule librairie avec modes dédiés.' },
+          ],
+        },
+        {
+          id: 'ops',
+          tag: 'B',
+          title: 'Design Ops',
+          oneLiner: 'Le bon chemin doit être le chemin naturel.',
+          method: [
+            'Cartographier le cycle design de bout en bout',
+            'Repérer les frictions — handoffs, revues, nommage, fichiers',
+            'Standardiser ce qui doit l\'être, laisser de la liberté sur le reste',
+            'Documenter usages, règles et contraintes — pour designers et devs',
+            'Animer des open hours pour que le système reste une conversation vivante',
+          ],
+          proof: [
+            { k: 'Documentation opérationnelle', v: 'Composants documentés avec usages, règles et contraintes — sécurisés pour designers et développeurs.' },
+            { k: 'Automatisation des workflows', v: 'Migration Sketch → Figma chez Orange, avec un UI Kit entièrement refait.' },
+            { k: 'Theming multi-modes', v: 'Switch light / dark livré sur l\'app mobile FDJ, piloté par tokens.' },
+          ],
+        },
+        {
+          id: 'ai',
+          tag: 'C',
+          title: 'Design AI',
+          oneLiner: 'Pas de hype. Du levier là où le système existe déjà.',
+          method: [
+            'Utiliser le design system comme grammaire de l\'IA',
+            'Automatiser ce qui est répétitif : docs, alt-text, changelogs',
+            'Outiller le review : détecter les dérives, proposer des tokens',
+            'Garder l\'humain dans chaque boucle créative',
+          ],
+          proof: [
+            { k: 'Auto-documentation', v: 'Props → MDX + exemples d\'usage, générés à chaque merge.' },
+            { k: 'Assistant design', v: 'Helper Figma qui associe les calques libres aux tokens existants.' },
+            { k: 'Génération accélérée', v: 'Des écrans complets depuis un brief — en quelques minutes, pas en heures.' },
+          ],
+        },
+        {
+          id: 'teach',
+          tag: 'D',
+          title: 'Transmission · Mentorat',
+          oneLiner: 'Un système se transmet par les gens, pas par les fichiers.',
+          method: [
+            'Workshops calés sur le rôle, pas sur le niveau',
+            'Mentorat 1:1 sur du vrai produit',
+            'Open hours ouvertes à tous les designers',
+            'Documenter le pourquoi, pas seulement le comment',
+          ],
+          proof: [
+            { k: 'ECV Aix-en-Provence', v: 'Atelier M1 — Atomic Design, variables, tokens, documentation, theming.' },
+            { k: '40+ designers formés', v: 'Ateliers, open hours, tutoriels et guides écrits chez Société Générale.' },
+            { k: 'Exercice fil rouge', v: 'Reprendre un bouton legacy et le rendre token-driven, accessible, thémé.' },
+          ],
+        },
+      ],
+    },
+    cases: {
+      kicker: '03 — Études de cas',
+      title: '3 environements.',
+      items: [
+        {
+          id: 'sg',
+          detailUrl: 'cases/sg.html',
+          client: 'Société Générale × Devoteam',
+          role: 'Consultant Design System Manager',
+          period: 'Mars 2024 — Sept. 2025',
+          summary: 'Refonte et unification des librairies Figma pour la banque retail — une source unique pour le client et le conseiller.',
+          context: 'Deux design systems en parallèle — un pour l\'app client, un pour l\'outillage conseiller. La dérive s\'accumulait. Les designers passaient plus de temps à se recaler sur les specs qu\'à concevoir. Les devs reconstruisaient des composants au lieu de les réutiliser.',
+          problem: 'Pas de contrat partagé. Des librairies dupliquées, difficiles à naviguer et à maintenir. Une adoption inégale selon les équipes. Aucune gouvernance documentée.',
+          action: [
+            'Réorganisation des librairies Figma — classement alphabétique aligné sur Storybook',
+            '280+ tokens de taille et 230+ tokens de couleur — une librairie, plusieurs modes',
+            'Fusion des systèmes client + conseiller en une seule librairie thématisée',
+            'Refonte de 25+ composants et reconstruction de 30+ icônes — slots, variables, variants rationalisés',
+            'Formation de 40+ designers via ateliers, open hours, tutoriels et guides écrits',
+          ],
+          result: [
+            { k: '40', s: '+', v: 'Designers formés au nouveau système' },
+            { k: '280', s: '+', v: 'Tokens de taille — source unique de vérité' },
+            { k: '230', s: '+', v: 'Tokens de couleur sur deux modes thématisés' },
+            { k: '4×', s: '', v: 'Déclinaison d\'écrans plus rapide' },
+          ],
+        },
+        {
+          id: 'ecv',
+          detailUrl: 'cases/ecv.html',
+          client: 'ECV Aix-en-Provence',
+          role: 'Intervenant — Atomic & Design System',
+          period: 'Févr. 2025 + Avr. 2026 · 2 promotions',
+          summary: 'Deux ateliers avec des étudiants Master 1 pour apprendre à concevoir et documenter un Design System de A à Z.',
+          context: 'Étudiants M1 avec un bon instinct UI mais sans modèles mentaux pour penser à l\'échelle système. Premier vrai contact avec l\'Atomic Design, les tokens, le theming et la gouvernance.',
+          problem: 'Sans bases solides pour penser système, la cohérence reste un accident. Le risque : produire de beaux écrans sans savoir passer de 10 à 100 sans tout casser.',
+          action: [
+            'Fondamentaux de l\'Atomic Design — atoms, molecules, organisms, templates, pages',
+            'Variables, types de tokens (primitive, sémantique, composant) et nommage',
+            'Chaque étudiant construit une librairie Figma complète — de la palette aux templates',
+            'Ateliers pratiques sur la décomposition modulaire et la réutilisation',
+            'Chaque étudiant documente ses composants — usages, règles, contraintes, variantes',
+          ],
+          result: [
+            { k: '2', s: '', v: 'Années consécutives, deux promotions formées' },
+            { k: '14', s: '', v: 'Étudiants M1 formés de bout en bout' },
+            { k: '14', s: '', v: 'Design systems documentés et livrés' },
+            { k: '5', s: ' j', v: 'Format intensif, reproductible' },
+          ],
+        },
+        {
+          id: 'fdj',
+          detailUrl: 'cases/fdj.html',
+          client: 'Française des Jeux × Devoteam',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Juil. 2022 — Déc. 2023',
+          summary: 'Prise en main du design system mobile de bout en bout — de contributeur à référent — avec un mode light/dark piloté par tokens.',
+          context: 'Une app mobile gaming avec une librairie Figma morcelée. Les variantes étaient maintenues à la main. Aucun contrat de thème. Le même composant existait en plusieurs versions légèrement différentes selon les écrans.',
+          problem: 'Designers et développeurs ralentis. La cohérence visuelle était aléatoire. Impossible de livrer le light/dark sans base tokenisée.',
+          action: [
+            'Concevoir et améliorer les parcours en parallèle du travail système',
+            'Prendre en main le design system mobile — d\'abord designer, puis référent',
+            'Refonte complète de la librairie Figma — variantes automatisées, tokens, switch light/dark',
+            'Tenir la cohérence graphique sur l\'ensemble de l\'app et outiller le workflow design + dev',
+            'Travailler avec les équipes eng et produit pour intégrer les composants proprement',
+          ],
+          result: [
+            { k: '1', s: '', v: 'Mode light/dark piloté par tokens livré en production' },
+            { k: '100', s: '%', v: 'Variantes automatisées, zéro maintenance manuelle' },
+            { k: '17', s: ' mois', v: 'Mission, dont le rôle de référent système' },
+            { k: '1', s: '', v: 'Librairie unique — une source pour toute l\'app' },
+          ],
+        },
+      ],
+    },
+    experience: {
+      kicker: '04 — Parcours',
+      title: 'Huit ans,\nsix contextes.',
+      items: [
+        {
+          org: 'ECV Aix-en-Provence',
+          role: 'Intervenant — Atomic & Design System',
+          period: 'Avr. 2026',
+          location: 'Aix-en-Provence',
+          impact: [
+            'Atelier M1 pour la deuxième années consécutive sur la conception et la documentation d\'un Design System',
+            'Atomic Design, variables, design tokens, documentation Supernova, theming',
+          ],
+        },
+        {
+          org: 'Société Générale × Devoteam',
+          role: 'Consultant Design System Manager',
+          period: 'Mars 2024 — Sept. 2025',
+          location: 'Paris · Remote',
+          impact: [
+            'Restructuration des librairies Figma — lisibilité, maintenabilité, adoption',
+            'Fusion des systèmes client + conseiller en une librairie avec modes dédiés',
+            '40+ designers formés via ateliers, open hours et guides écrits',
+          ],
+        },
+        {
+          org: 'ECV Aix-en-Provence',
+          role: 'Intervenant — Atomic & Design System',
+          period: 'Févr. 2025',
+          location: 'Aix-en-Provence',
+          impact: [
+            'Atelier M1 sur la conception et la documentation d\'un Design System',
+            'Atomic Design, variables, design tokens, documentation Zeroheight, theming',
+          ],
+        },
+        {
+          org: 'Française des Jeux × Devoteam',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Juil. 2022 — Déc. 2023',
+          location: 'Paris',
+          impact: [
+            'En charge du design system mobile — d\'abord designer, puis référent',
+            'Refonte Figma — variantes automatisées, tokens, switch light/dark',
+            'Cohérence graphique tenue sur l\'app, workflow design + dev outillé',
+          ],
+        },
+        {
+          org: 'Orange × Niji',
+          role: 'Consultant Product Designer',
+          period: 'Oct. 2021 — Juin 2022',
+          location: 'Paris',
+          impact: [
+            'Refonte et simplification des parcours de souscription, validés par tests utilisateurs',
+            'Migration de l\'équipe de Sketch vers Figma',
+            'Création d\'un nouveau UI Kit aligné sur les parcours refondus',
+          ],
+        },
+        {
+          org: 'Funecap × Niji',
+          role: 'Consultant Product Designer · System Designer',
+          period: 'Avr. 2021 — Sept. 2021',
+          location: 'Paris',
+          impact: [
+            'Refonte complète de la librairie Figma de zéro',
+            'Cohérence graphique tenue sur l\'ensemble des écrans, workflow design + dev outillé',
+          ],
+        },
+        {
+          org: 'Mister Menuiserie',
+          role: 'Product Designer · System Designer',
+          period: 'Mars 2018 — Févr. 2021',
+          location: 'France',
+          impact: [
+            'Modernisation et harmonisation de 7 sites e-commerce — sortie de l\'image hard-discount',
+            'Conception de configurateurs produits simples et efficaces',
+            'Mise en place d\'un design system cohérent sur les 7 plateformes',
+          ],
+        },
+      ],
+    },
+    recos: {
+      kicker: '05 — Recommandations',
+      title: 'On a travaillé ensemble.',
+      items: [
+        {
+          quote: 'Martin a eu un rôle central dans le passage à l\'échelle du Design System AVENIR de la Banque de Détails de la Société Générale. Son expertise sur l\'architecture Figma, son accompagnement des Product Designers et développeurs, et sa capacité à appliquer une vision claire à court et long terme en font un Design System Manager très complet.',
+          name: 'Salomé M.',
+          role: 'Design Ops Manager · SG x Devoteam',
+        },
+        {
+          quote: 'Martin a eu un rôle essentiel dans la mise en place du Design System à la Société Générale. Son expertise Figma nous a permis de déployer les design tokens sur l\'ensemble des composants multi-thèmes. La mise en place de slots pour automatiser le rendu responsive a grandement facilité la production des designers.',
+          name: 'Ivan T.',
+          role: 'Responsable d\'application · SG',
+        },
+        {
+          quote: 'C\'est grâce au travail acharné de Martin que nous avons pu lancer l\'un des projets les plus structurants du DS : la matrice de tokens. On y a énormément gagné en rapidité et en flexibilité sur la conception des composants. Au-delà du système, Martin a toujours été présent pour aider et former les Product Designers.',
+          name: 'Justine L.',
+          role: 'Design System Designer · SG x Devoteam',
+        },
+        {
+          quote: 'Martin possède une vision 360° des règles design system, avec une rigueur exemplaire. Sa capacité à structurer, faire évoluer et diffuser une culture DS cohérente a considérablement facilité le travail des Product Designers et des équipes dev. Pragmatique, accessible, rapide — je le recommande sans hésitation.',
+          name: 'Marta M.',
+          role: 'Product Designer Manager · SG x Upgrade',
+        },
+        {
+          quote: 'Travailler avec Martin a été aussi agréable qu\'enrichissant. Il apporte de la sérénité, de la confiance et une dynamique positive à toute l\'équipe. Au-delà des compétences techniques, c\'est un pédagogue — toujours disponible pour expliquer ou débloquer.',
+          name: 'Sarah S.',
+          role: 'Product Designer · SG x Devoteam',
+        },
+        {
+          quote: 'Martin excelle dans la gestion des design systems, ce qui rend le travail d\'équipe fluide et efficace. Il a un vrai talent pour rassembler et partager ses idées de manière inspirante. Techniquement au top, mais ce qui le distingue, c\'est l\'approche humaine.',
+          name: 'Marc Q.',
+          role: 'Product Designer · FDJ x Devoteam',
+        },
+      ],
+    },
+    contact: {
+      kicker: '06 — Contact',
+      title: 'Contact.',
+      sub: 'Idéal : poste de Lead Design System CDI (remote) ou mission freelance ciblée — audit système, déploiement, structuration des ops.',
+      availability: 'Disponibilité freelance — ASAP',
+      links: [
+        { k: 'LinkedIn', v: 'linkedin.com/in/mmolet', href: 'https://www.linkedin.com/in/mmolet' },
+        { k: 'Localisation', v: 'Marseille ou remote' },
+      ],
+    },
+  },
+};
+window.CONTENT = CONTENT;
+
+Afficher plus
+
+Processus de réflexion
+Processus de réflexion
+Je vois que cases/ est toujours présent dans les detailUrl. Je te génère directement le fichier content.js corrigé à télécharger et uploader sur GitHub.
+
+
+A exécuté une commande
+A exécuté une commande
+Voilà le fichier corrigé — les 6 cases/ ont été supprimés (3 en anglais + 3 en français).
+
+Télécharger content.js corrigé
+
+Pour l'uploader sur GitHub :
+
+Dans ton repo, clique sur content.js → ✏️ Edit
+Sélectionne tout le contenu (Ctrl+A) et supprime-le
+Colle le contenu du fichier que tu viens de télécharger
+Commit changes
+Après ça, les liens "Étude complète ↗" devraient pointer correctement vers sg.html, ecv.html et fdj.html.
+
+
+Content
+JS 
+https://martinmolet.github.io/portefolio/
+
+
+Processus de réflexion
+Processus de réflexion
+Je vérifie le site !
+
+
+Web recherché
+Web recherché
+Le site charge bien ! Je vérifie aussi que les liens des études de cas fonctionnent maintenant.
+
+
+Web recherché
+Web recherché
+Le site principal est bien en ligne et répond correctement. Pour les études de cas, dis-moi : est-ce que tu as bien uploadé le content.js corrigé sur GitHub ? Si oui, est-ce que les liens "Étude complète ↗" s'affichent et fonctionnent quand tu cliques dessus ?
+
+maintenant les lien de retour au index.html ne foctionne pas, voici le code
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Société Générale × Devoteam — Design System Manager | Martin Molet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="tb-l">
+    <a class="back-link" href="index.html"><span class="arrow">←</span><span>Retour au portfolio</span></a>
+  </div>
+  <div class="tb-c"><span class="accent">CASE / SG</span> · Design System Manager · 2024 — 2025</div>
+  <div class="tb-r">
+    <div class="lang-toggle"><button class="on">FR</button></div>
+  </div>
+</header>
+<main>
+  <section class="sheet">
+    <div class="hero">
+      <div class="hero-l">
+        <div class="case-id">CASE / SG · AVENIR</div>
+        <h1 class="client">Société Générale<br/>× Devoteam</h1>
+        <p class="summary">Mise à l'échelle du Design System AVENIR, la librairie qui fait tourner la banque de détail. Audit, gouvernance, tokens, documentation, composants et workflow.</p>
+      </div>
+      <div class="hero-r">
+        <div><span class="k">RÔLE</span><span class="v">Consultant Design System Manager</span></div>
+        <div><span class="k">PÉRIODE</span><span class="v">Mars 2024 — Sept. 2025 · 18 mois</span></div>
+        <div><span class="k">ÉQUIPE</span><span class="v">+40 Product Designers · 3 domaines</span></div>
+        <div><span class="k">STACK</span><span class="v">Figma · Variables · Zeroheight · Storybook</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-h">
+        <span class="num">00</span>
+        <span class="title">Contexte</span>
+        <span class="rule"></span>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-cell">
+          <div class="l">Existant</div>
+          <p>Quand j'ai rejoint la Société Générale en tant que Design System Manager, le DS AVENIR était déjà opérationnel depuis trois ans. Outil utilisé par +40 Product Designers répartis sur 3 domaines distincts : le grand public, l'assurance et le conseil.</p>
+        </div>
+        <div class="intro-cell">
+          <div class="l">Problème</div>
+          <p>Un seul Product Designer était chargé du DS et se trouvait débordé par un grand nombre de demandes. La gestion et l'évolution du système étaient bloquées par le volume, l'isolement et l'absence de gouvernance partagée.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-h">
+        <span class="num">01</span>
+        <span class="title">Fluidifier la communication</span>
+        <span class="rule"></span>
+      </div>
+      <div class="block">
+        <div class="block-h"><span class="tag">CHANTIER A</span><span class="name">Optimisation de la communication</span></div>
+        <div class="block-cols">
+          <div class="block-col">
+            <div class="label">Problématique</div>
+            <p>Beaucoup de demandes directes perturbaient nos cycles de travail. Les Product Designers manquaient de visibilité sur les projets du Design System et sur les difficultés rencontrées. La coordination et l'efficacité en souffraient.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Solution</div>
+            <ul>
+              <li data-n="01">Limiter les sollicitations directes pour éviter les pertes d'information</li>
+              <li data-n="02">Canaux dédiés, modérés par l'équipe DS, pour les échanges</li>
+              <li data-n="03">Rituels OpenHours + réunions de release DS pour encourager la communication</li>
+              <li data-n="04">Système de tickets Jira pour donner la visibilité aux projets</li>
+            </ul>
+          </div>
+          <div class="block-col">
+            <div class="label">Résultat</div>
+            <p>Collaboration nettement améliorée entre équipes. Une communauté designers + POs + dévs s'est formée. Des membres expérimentés sont devenus ambassadeurs du DS. L'équipe DS communique ses avancées sans être submergée par des demandes répétitives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-h">
+        <span class="num">02</span>
+        <span class="title">Réorganiser la librairie</span>
+        <span class="rule"></span>
+      </div>
+      <div class="block">
+        <div class="block-h"><span class="tag">CHANTIER B</span><span class="name">Architecture de la librairie principale</span></div>
+        <div class="block-cols">
+          <div class="block-col">
+            <div class="label">Problématique</div>
+            <p>L'analyse des bibliothèques a révélé que la localisation des composants dans Figma était complexe. Les composants étaient classés par famille, demandant une connaissance préalable pour les retrouver.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Solution</div>
+            <ul>
+              <li data-n="01">Organisation alphabétique pour simplifier la recherche</li>
+              <li data-n="02">Alignement avec les standards Storybook</li>
+              <li data-n="03">Barre latérale repensée pour la navigation et l'ergonomie</li>
+              <li data-n="04">Sections mieux définies avec des séparateurs</li>
+              <li data-n="05">Une page dédiée par composant</li>
+            </ul>
+          </div>
+          <div class="block-col">
+            <div class="label">Résultat</div>
+            <p>L'organisation alphabétique a amélioré la recherche. Figma est désormais aligné avec Storybook, offrant une navigation fluide entre design et développement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-h">
+        <span class="num">03</span>
+        <span class="title">Tokens de size</span>
+        <span class="rule"></span>
+      </div>
+      <div class="block">
+        <div class="block-h"><span class="tag">CHANTIER C</span><span class="name">Création des tokens de size</span></div>
+        <div class="block-cols">
+          <div class="block-col">
+            <div class="label">Problématique</div>
+            <p>À mon arrivée, presque aucun token n'était configuré. Ils étaient tous rassemblés dans une seule collection sans structure sémantique. Aucune source unique de vérité pour les dimensions.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Solution</div>
+            <ul>
+              <li data-n="01">+280 variables créées pour les tailles d'écran, éléments, espacements</li>
+              <li data-n="02">Grilles, radius et typographie tokenisés</li>
+              <li data-n="03">Variables qui contrôlent l'affichage mobile, desktop et app</li>
+              <li data-n="04">Mêmes tokens d'espacement utilisés pour mobile et desktop</li>
+            </ul>
+          </div>
+          <div class="block-col">
+            <div class="label">Résultat</div>
+            <p>Les tokens ont réduit la friction et minimisé les erreurs. Ils sont la nouvelle source de vérité et permettent une déclinaison des écrans 4× plus rapide. Un même écran s'affiche dans 2 modes différents en quelques secondes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-h">
+        <span class="num">04</span>
+        <span class="title">Tokens de couleur</span>
+        <span class="rule"></span>
+      </div>
+      <div class="block">
+        <div class="block-h"><span class="tag">CHANTIER D</span><span class="name">Création des tokens de couleur</span></div>
+        <div class="block-cols">
+          <div class="block-col">
+            <div class="label">Problématique</div>
+            <p>Historiquement, les couleurs pouvaient être appliquées à n'importe quel type d'élément sans indication d'usage. Cela bloquait le theming et obligeait à maintenir plusieurs bibliothèques identiques.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Solution</div>
+            <ul>
+              <li data-n="01">Inventaire des couleurs existantes pour éviter les redondances</li>
+              <li data-n="02">Nouvelle palette répondant aux exigences spécifiques du projet</li>
+              <li data-n="03">Chaque teinte avec une fonction distincte (status, brand, ui)</li>
+              <li data-n="04">Tokens avec alias spécifiques pour faciliter l'intégration</li>
+            </ul>
+          </div>
+          <div class="block-col">
+            <div class="label">Résultat</div>
+            <p>+230 variables de couleur créées pour afficher 2 modes distincts. Fin de la maintenance de 2 bibliothèques en parallèle : une seule bibliothèque commune thématisée.</p>
+          </div>
+        </div>
+      </div>
+      <div class="diagram">
+        <div class="label"><span>FIG.04 — TOKEN ALIASES</span><span class="id">/ AVENIR</span></div>
+        <div class="swatches">
+          <div class="swatch">
+            <div class="chip" style="background:
+#298737"></div>
+            <div class="name">color.status.success</div>
+            <div class="hex">green.70 · 
+#298737</div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:
+#298737"></div>
+            <div class="name">text.success</div>
+            <div class="hex">green.70</div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:
+#298737"></div>
+            <div class="name">border.success</div>
+            <div class="hex">green.70</div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:
+#E2010A"></div>
+            <div class="name">color.brand.client</div>
+            <div class="hex">red.60 · 
+#E2010A</div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:
+#2F54E0"></div>
+            <div class="name">color.brand.agence</div>
+            <div class="hex">blue.30 · 
+#2F54E0</div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:
+#FF7A59"></div>
+            <div class="name">icon.brand.agence</div>
+            <div class="hex">— · alias</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-h">
+        <span class="num">05</span>
+        <span class="title">Évolution des composants</span>
+        <span class="rule"></span>
+      </div>
+      <div class="block">
+        <div class="block-h"><span class="tag">EX.01</span><span class="name">Refonte header & footer</span></div>
+        <div class="block-cols">
+          <div class="block-col">
+            <div class="label">Contexte</div>
+            <p>Le footer et le header étaient regroupés dans un seul composant. Les propriétés du header, du footer et du sidebar se mélangeaient, ce qui provoquait des erreurs d'affichage.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Solution</div>
+            <p>Séparer ces deux composants en deux entités bien distinctes avec chacune leurs propriétés propres. Plus de fuite de logique entre header, footer et sidebar.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Bénéfice</div>
+            <p>Plus d'erreurs d'affichage liées à des propriétés croisées. Chaque composant a un périmètre clair et un contrat lisible pour les designers et les dévs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-h"><span class="tag">EX.02</span><span class="name">Refonte du Layout — slots et variables</span></div>
+        <div class="block-cols">
+          <div class="block-col">
+            <div class="label">Contexte</div>
+            <p>Le Layout est essentiel au début de chaque page. L'ancienne version manquait de flexibilité et devait anticiper chaque état possible : onglet ou pas ? stepper ? combien d'étapes ? Une combinatoire ingérable.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Solution</div>
+            <p>Utiliser les variables pour ne plus avoir à concevoir la version mobile séparément. Un slot remplace le contenu pour une meilleure flexibilité et permet aux designers de personnaliser le composant selon leur besoin réel.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Bénéfice</div>
+            <p>Un seul Layout au lieu de dizaines de variants. Les designers n'ont plus à jongler avec les options : ils insèrent ce dont ils ont besoin dans le slot.</p>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-h"><span class="tag">EX.03</span><span class="name">Création de patterns</span></div>
+        <div class="block-cols">
+          <div class="block-col">
+            <div class="label">Contexte</div>
+            <p>Avec l'arrivée des variables, l'automatisation a pris une place importante. Avant, chaque composant devait être configuré manuellement : travail long, fastidieux et source d'erreurs.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Solution</div>
+            <p>Automatiser l'affichage de chaque composant au format choisi. Pour aller plus loin, créer des <strong style="color:var(--ink)">patterns</strong> : composants qui intègrent directement les bonnes grilles, espacements et configurations, avec des déclinaisons en un clic.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Bénéfice</div>
+            <p>Composants réactifs aux variables, plus facilement déclinables. Simplification de la librairie (chaque composant a un périmètre délimité). Maintenance réduite : suppression d'un grand nombre de variants inutiles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-h">
+        <span class="num">06</span>
+        <span class="title">Support & accompagnement</span>
+        <span class="rule"></span>
+      </div>
+      <div class="block">
+        <div class="block-h"><span class="tag">CHANTIER E</span><span class="name">Tutoriels, documentation, formation</span></div>
+        <div class="block-cols">
+          <div class="block-col">
+            <div class="label">Tutoriels</div>
+            <p>Sessions tutorielles pour aider les designers à assimiler les nouveautés. Chaque nouvelle fonctionnalité expliquée en détail, avec ses contraintes et ses cas d'usage.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Documentation 360°</div>
+            <p>Chaque composant documenté dans Figma, Zeroheight et Storybook. La documentation est adaptée au support : design dans Figma, code dans Storybook, contexte en lecture longue.</p>
+          </div>
+          <div class="block-col">
+            <div class="label">Résultat</div>
+            <p>Les designers se sentent mieux accompagnés et montent en compétence grâce au DS. Une communauté se crée autour du système, renforçant son adoption. Réduction des délais, équipe plus précise et efficace.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-h">
+        <span class="num">07</span>
+        <span class="title">Impact mesuré</span>
+        <span class="rule"></span>
+      </div>
+      <div class="results-grid">
+        <div class="result-stat"><div class="num">40<span class="s">+</span></div><div class="lbl">Designers formés sur le système</div></div>
+        <div class="result-stat"><div class="num">280<span class="s">+</span></div><div class="lbl">Tokens de size, source unique</div></div>
+        <div class="result-stat"><div class="num">230<span class="s">+</span></div><div class="lbl">Tokens de couleur, 2 modes</div></div>
+        <div class="result-stat"><div class="num">4<span class="s">×</span></div><div class="lbl">Plus rapide en déclinaison d'écrans</div></div>
+        <div class="result-stat"><div class="num">2 → 1</div><div class="lbl">Bibliothèques fusionnées</div></div>
+        <div class="result-stat"><div class="num">185<span class="s">+</span></div><div class="lbl">Composants refondus ou créés</div></div>
+        <div class="result-stat"><div class="num">300<span class="s">+</span></div><div class="lbl">Icons reconstruits et optimisés</div></div>
+        <div class="result-stat"><div class="num">18<span class="s"> mo</span></div><div class="lbl">Durée de mission, 4 releases livrées</div></div>
+      </div>
+    </div>
+    <div class="related">
+      <div class="related-h">AUTRES CASES</div>
+      <div class="related-grid">
+        <a class="related-card" href="fdj.html">
+          <div class="id">CASE / FDJ</div>
+          <div class="name">Française des Jeux<span class="arrow">↗</span></div>
+          <div class="sub">Pilotage du DS mobile, light/dark piloté par tokens.</div>
+        </a>
+        <a class="related-card" href="ecv.html">
+          <div class="id">CASE / ECV</div>
+          <div class="name">ECV Aix-en-Provence<span class="arrow">↗</span></div>
+          <div class="sub">Deux promotions M1 formées sur Atomic Design & tokens.</div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-sheet">
+      <div class="section-h">
+        <span class="num">CTA</span>
+        <span class="title">Contact.</span>
+        <span class="rule"></span>
+      </div>
+      <div class="contact">
+        <p class="contact-sub">Idéal : poste de Lead Design System CDI (remote) ou mission freelance ciblée — audit système, déploiement, structuration des ops.</p>
+        <div class="contact-grid">
+          <a class="contact-row is-link" href="https://www.linkedin.com/in/mmolet" target="_blank" rel="noopener noreferrer">
+            <span class="cr-id">CH.01</span>
+            <span class="cr-k">LinkedIn</span>
+            <span class="cr-v">linkedin.com/in/mmolet</span>
+            <span class="cr-arrow">↗</span>
+          </a>
+          <div class="contact-row">
+            <span class="cr-id">CH.02</span>
+            <span class="cr-k">Localisation</span>
+            <span class="cr-v">Marseille · Full remote</span>
+          </div>
+        </div>
+        <div class="contact-avail">
+          <span class="ca-dot"></span>
+          <span>Disponibilité freelance — T3 2026</span>
+        </div>
+        <div class="signoff">
+          <div>— Martin Molet</div>
+          <div class="so-sub">Product Designer · Design System &amp; Design Ops</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="statusbar">
+  <div class="sb-cell"><span class="sb-k">FILE</span><span>case.sg.v1</span></div>
+  <div class="sb-cell"><span class="sb-k">SHEET</span><span>01 / 03</span></div>
+  <div class="sb-cell"><span class="sb-k">SCALE</span><span>1:1</span></div>
+  <div class="sb-cell"><span class="sb-k">REV</span><span>Mai 2026</span></div>
+  <div class="sb-cell"><a href="index.html" style="color:var(--accent)">← Retour portfolio</a></div>
+</footer>
+<script>
+(function(){
+  var h=document.createElement('div'),v=document.createElement('div');
+  h.className='cross-h';v.className='cross-v';
+  document.body.appendChild(h);document.body.appendChild(v);
+  window.addEventListener('mousemove',function(e){h.style.top=e.clientY+'px';v.style.left=e.clientX+'px';});
+})();
+</script>
+</body>
+</html>
+
+Afficher plus
+
+Processus de réflexion
+Processus de réflexion
+Le code du lien de retour a l'air correct — href="index.html" devrait fonctionner puisque sg.html et index.html sont dans le même dossier.
+
+Qu'est-ce qui se passe exactement quand tu cliques sur "Retour au portfolio" ? Tu arrives sur une page d'erreur 404, ou la page se charge mais est vide/cassée ?
+
+Et quelle URL s'affiche dans la barre d'adresse après avoir cliqué ?
+
+Image téléchargée
+Capture d’écran 2026-05-21 à 11.07.04.png
+en mobile, la nav marche mal en bas, j'aimerai garder uniquement le statut, le reste n'a pass de valeur reel
+
+
+Processus de réflexion
+Processus de réflexion
+Bonne idée, c'est une fix CSS simple. Ajoute ce snippet à la fin de ton fichier styles.css sur GitHub :
+
+css
+@media (max-width: 768px) {
+  .statusbar .sb-cell:not(.flex-1) {
+    display: none;
+  }
+  .statusbar .sb-cell.flex-1 {
+    justify-content: center;
+  }
+}
+Ça masque FILE, SHEET, SCALE et REV sur mobile, et garde uniquement la pill STATUS centrée.
+
+Pour l'ajouter sur GitHub :
+
+Dans ton repo → clique sur styles.css → ✏️ Edit
+Descends tout en bas du fichier
+Colle le bloc CSS ci-dessus
+Commit changes
+Attends 1-2 minutes et teste sur mobile. Dis-moi si le rendu te convient ou si tu veux ajuster la taille / position du statut.
+
+voilà le css, corrige le 
+
 /* Martin Molet portfolio — blueprint dark */
-
 :root {
-  --bg: #0B0E10;
-  --bg-2: #0F1316;
-  --ink: #E6E6E1;
-  --ink-2: #C7CCC8;
-  --muted: #6F7A7A;
-  --muted-2: #4A5354;
-  --line: #1E2528;
-  --line-2: #2A3236;
-  --accent: #7DE2D1;
+  --bg: 
+#0B0E10;
+  --bg-2: 
+#0F1316;
+  --ink: 
+#E6E6E1;
+  --ink-2: 
+#C7CCC8;
+  --muted: 
+#6F7A7A;
+  --muted-2: 
+#4A5354;
+  --line: 
+#1E2528;
+  --line-2: 
+#2A3236;
+  --accent: 
+#7DE2D1;
   --accent-soft: #7DE2D133;
-  --danger: #FF8A8A;
-  --good: #9DE6B6;
-
+  --danger: 
+#FF8A8A;
+  --good: 
+#9DE6B6;
   --grid: 24px;
-
   --pad-y: 96px;
   --pad-x: 64px;
-
   --topbar-h: 56px;
   --status-h: 36px;
-
   --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', 'IBM Plex Mono', Menlo, monospace;
   --serif: 'Newsreader', 'Source Serif 4', Georgia, serif;
 }
-
 :root[data-density="compact"] {
   --pad-y: 64px;
   --pad-x: 48px;
 }
-
 * { box-sizing: border-box; }
 html, body, #root { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
 html { font-family: var(--mono); font-size: 14px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
@@ -38,16 +2865,14 @@ body { overflow-x: hidden; }
 button { font: inherit; color: inherit; background: transparent; border: 0; padding: 0; cursor: pointer; }
 input { font: inherit; }
 a { color: inherit; text-decoration: none; }
-
-::selection { background: var(--accent); color: #0B0E10; }
-
+::selection { background: var(--accent); color: 
+#0B0E10; }
 /* ---------- stage / blueprint ---------- */
 .stage {
   position: relative;
   min-height: 100vh;
   isolation: isolate;
 }
-
 .grid-bg {
   position: fixed;
   inset: 0;
@@ -60,7 +2885,6 @@ a { color: inherit; text-decoration: none; }
   mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 30%, transparent 100%);
   opacity: 0.55;
 }
-
 .cross-h, .cross-v {
   position: fixed;
   pointer-events: none;
@@ -71,7 +2895,6 @@ a { color: inherit; text-decoration: none; }
 }
 .cross-h { left: 0; right: 0; height: 1px; }
 .cross-v { top: 0; bottom: 0; width: 1px; }
-
 /* ---------- topbar ---------- */
 .topbar {
   position: sticky;
@@ -88,10 +2911,8 @@ a { color: inherit; text-decoration: none; }
   font-size: 12px;
   letter-spacing: 0.02em;
 }
-
 .tb-l, .tb-r { display: flex; align-items: center; gap: 16px; }
 .tb-r { justify-content: flex-end; }
-
 .logo { display: flex; align-items: center; gap: 10px; white-space: nowrap; min-width: 0; }
 .logo-mark { color: var(--accent); letter-spacing: -0.1em; }
 .logo-name { font-weight: 600; letter-spacing: 0.05em; }
@@ -101,7 +2922,6 @@ a { color: inherit; text-decoration: none; }
   .navlink .navnum { display: none; }
   .navlink { padding: 8px 10px; }
 }
-
 .tb-c { display: flex; gap: 0; }
 .navlink {
   display: inline-flex;
@@ -125,13 +2945,10 @@ a { color: inherit; text-decoration: none; }
   height: 1px;
   background: var(--accent);
 }
-
 .coord { display: flex; gap: 8px; color: var(--muted); font-variant-numeric: tabular-nums; }
-
 .lang-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--line); }
 .lang-toggle button { color: var(--muted); padding: 0; }
 .lang-toggle button.on { color: var(--accent); }
-
 /* ---------- status bar ---------- */
 .statusbar {
   position: sticky;
@@ -156,7 +2973,6 @@ a { color: inherit; text-decoration: none; }
 .status-pill { display: inline-flex; align-items: center; gap: 6px; color: var(--good); }
 .status-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--good); animation: pulse 1.6s infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
 /* ---------- sheet ---------- */
 .sheets { position: relative; z-index: 2; }
 .sheet {
@@ -174,7 +2990,6 @@ a { color: inherit; text-decoration: none; }
 }
 .sheet::before { top: 16px; left: 16px; border-right: 0; border-bottom: 0; }
 .sheet::after { bottom: 16px; right: 16px; border-left: 0; border-top: 0; }
-
 .sh { margin-bottom: 48px; }
 .sh-kicker {
   font-size: 11px;
@@ -210,7 +3025,6 @@ a { color: inherit; text-decoration: none; }
 }
 .sh-sm .sh-title { font-size: clamp(20px, 2.4vw, 32px); }
 .sh-sm { margin-top: 80px; margin-bottom: 32px; }
-
 /* ---------- HERO ---------- */
 .hero {
   display: grid;
@@ -236,9 +3050,7 @@ a { color: inherit; text-decoration: none; }
 .hero-line:nth-child(2) { animation-delay: 0.15s; color: var(--accent); }
 .hero-line:nth-child(3) { animation-delay: 0.25s; }
 @keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
 .hero-sub { color: var(--muted); max-width: 50ch; font-size: 15px; margin: 0 0 32px; }
-
 .hero-cta { display: flex; gap: 12px; margin-bottom: 48px; }
 .btn {
   display: inline-flex;
@@ -252,14 +3064,13 @@ a { color: inherit; text-decoration: none; }
 }
 .btn-arrow { transition: transform 0.2s; }
 .btn:hover .btn-arrow { transform: translate(2px, -2px); }
-.btn-primary { background: var(--accent); color: #0B0E10; border-color: var(--accent); }
+.btn-primary { background: var(--accent); color: 
+#0B0E10; border-color: var(--accent); }
 .btn-primary:hover { box-shadow: 0 0 0 4px var(--accent-soft); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
-
 .hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 600px; }
 .hero-meta > div { display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-top: 1px solid var(--line); }
 .hero-meta .k { font-size: 10px; color: var(--muted-2); letter-spacing: 0.18em; }
-
 /* portrait */
 .hero-r { display: flex; justify-content: flex-end; }
 .portrait { position: relative; width: 100%; max-width: 360px; }
@@ -287,7 +3098,6 @@ a { color: inherit; text-decoration: none; }
 .corner.tr { top: -1px; right: -1px; border-left: 0; border-bottom: 0; }
 .corner.bl { bottom: -1px; left: -1px; border-right: 0; border-top: 0; }
 .corner.br { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
-
 .dim-h, .dim-v {
   position: absolute;
   color: var(--muted-2);
@@ -300,7 +3110,6 @@ a { color: inherit; text-decoration: none; }
 .dim-v { right: -28px; top: 0; bottom: 0; flex-direction: column; }
 .dim-v::before, .dim-v::after { content: ''; flex: 1; width: 1px; background: var(--line-2); }
 .dim-v span { writing-mode: vertical-rl; }
-
 .portrait-callout {
   position: absolute;
   bottom: -40px; left: -40px;
@@ -312,7 +3121,6 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line);
 }
 .ca-num { color: var(--accent); }
-
 /* ---------- metrics ---------- */
 .metrics {
   display: grid;
@@ -342,7 +3150,6 @@ a { color: inherit; text-decoration: none; }
 .mv-suffix { font-size: 32px; color: var(--accent); font-weight: 400; }
 .metric-label { font-size: 13px; color: var(--ink-2); margin-bottom: 8px; max-width: 26ch; }
 .metric-note { font-size: 11px; color: var(--muted); max-width: 32ch; }
-
 /* ---------- WORK ---------- */
 .practice-wrap {
   display: grid;
@@ -376,21 +3183,16 @@ a { color: inherit; text-decoration: none; }
 .pt-title { flex: 1; font-size: 13px; }
 .pt-arrow { font-size: 10px; color: var(--muted-2); }
 .practice-tab.on .pt-arrow { color: var(--accent); }
-
 .practice-pane { padding: 32px 32px; animation: fade 0.4s; }
 @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-
 .pp-head { margin-bottom: 32px; }
 .pp-tag { font-size: 10px; color: var(--muted-2); letter-spacing: 0.2em; }
 .pp-title { font-size: 28px; font-weight: 500; margin: 8px 0 12px; letter-spacing: -0.02em; }
 .pp-one { color: var(--accent); font-size: 14px; margin: 0; }
 [data-typepair="serif-mono"] .pp-title { font-family: var(--serif); font-weight: 400; }
-
 .pp-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; }
-
 .col-h { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 11px; color: var(--muted-2); text-transform: uppercase; letter-spacing: 0.18em; }
 .col-rule { flex: 1; height: 1px; background: var(--line); }
-
 .method { list-style: none; padding: 0; margin: 0; }
 .method li {
   display: flex; gap: 12px;
@@ -401,13 +3203,11 @@ a { color: inherit; text-decoration: none; }
 }
 .method li:last-child { border-bottom: 1px solid var(--line); }
 .m-num { color: var(--muted-2); font-size: 11px; min-width: 24px; padding-top: 2px; }
-
 .proof { list-style: none; padding: 0; margin: 0 0 24px; }
 .proof li { padding: 12px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1.5fr; gap: 16px; }
 .proof li:last-child { border-bottom: 1px solid var(--line); }
 .proof-k { color: var(--accent); font-size: 13px; }
 .proof-v { color: var(--ink-2); font-size: 13px; }
-
 /* ---------- live token switcher / proof widgets ---------- */
 .ts {
   border: 1px solid var(--line-2);
@@ -418,15 +3218,14 @@ a { color: inherit; text-decoration: none; }
 .ts-h-r { color: var(--accent); }
 .ts-controls { display: flex; flex-direction: column; gap: 0; padding: 0; }
 .ts-controls .seg { padding: 8px 12px; border-bottom: 1px solid var(--line); }
-
 .seg { display: flex; align-items: center; gap: 12px; }
 .seg-l { font-size: 11px; color: var(--muted); width: 80px; letter-spacing: 0.1em; text-transform: uppercase; }
 .seg-r { display: flex; gap: 0; border: 1px solid var(--line); }
 .seg-r button { padding: 4px 10px; font-size: 11px; color: var(--muted); border-right: 1px solid var(--line); }
 .seg-r button:last-child { border-right: 0; }
 .seg-r button:hover { color: var(--ink); }
-.seg-r button.on { background: var(--accent); color: #0B0E10; }
-
+.seg-r button.on { background: var(--accent); color: 
+#0B0E10; }
 .ts-preview { padding: 16px; border-top: 1px solid var(--line); transition: background 0.3s, color 0.3s; }
 .ts-card { padding: var(--pad, 14px); border: 1px solid currentColor; border-color: rgba(127,127,127,0.3); transition: padding 0.2s; }
 .ts-row { display: flex; gap: 6px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
@@ -434,7 +3233,6 @@ a { color: inherit; text-decoration: none; }
 .ts-body { font-size: 12px; max-width: 50ch; margin-bottom: 12px; }
 .ts-actions { display: flex; gap: 8px; }
 .ts-btn { padding: 6px 12px; border: 1px solid; font-size: 11px; letter-spacing: 0.05em; background: transparent; cursor: pointer; }
-
 /* ops */
 .ops-grid { padding: 14px; display: grid; gap: 10px; }
 .ops-row { display: grid; grid-template-columns: 80px 1fr 50px; align-items: center; gap: 12px; font-size: 12px; }
@@ -443,7 +3241,6 @@ a { color: inherit; text-decoration: none; }
 .ops-fill { height: 100%; background: var(--accent); transition: width 0.6s; }
 .ops-fill.bad { background: var(--danger); }
 .ops-v { text-align: right; color: var(--ink-2); font-variant-numeric: tabular-nums; }
-
 /* code */
 .code {
   margin: 0; padding: 14px;
@@ -453,21 +3250,18 @@ a { color: inherit; text-decoration: none; }
   overflow-x: auto;
   background: transparent;
 }
-
 /* workshops */
 .ws { list-style: none; padding: 0; margin: 0; }
 .ws li { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 12px; }
 .ws li:last-child { border-bottom: 0; }
 .ws-tick { color: var(--accent); }
 .ws-id { margin-left: auto; color: var(--muted-2); font-size: 10px; letter-spacing: 0.1em; }
-
 /* ---------- COMPONENT PLAYGROUND ---------- */
 .playground { border: 1px solid var(--line-2); }
 .pg-h { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--line); font-size: 11px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; }
 .pg-rule { flex: 1; height: 1px; background: var(--line); }
 .pg-r { color: var(--accent); }
 .pg-tag { color: var(--ink-2); }
-
 .pg-body { display: grid; grid-template-columns: 1.4fr 1fr; }
 .pg-stage {
   padding: 48px;
@@ -486,7 +3280,6 @@ a { color: inherit; text-decoration: none; }
 }
 .pg-stage-inner { display: flex; flex-direction: column; align-items: center; gap: 24px; }
 .pg-callout { color: var(--muted); font-size: 11px; }
-
 .btn-pp {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 10px 18px;
@@ -498,7 +3291,8 @@ a { color: inherit; text-decoration: none; }
   transition: transform 0.1s;
 }
 .btn-pp:active { transform: translateY(1px); }
-.btn-pp-primary { background: var(--accent); color: #0B0E10; border-color: var(--accent); }
+.btn-pp-primary { background: var(--accent); color: 
+#0B0E10; border-color: var(--accent); }
 .btn-pp-ghost { background: transparent; color: var(--ink); border-color: var(--line-2); }
 .btn-pp-danger { background: transparent; color: var(--danger); border-color: var(--danger); }
 .btn-sm { padding: 6px 12px; font-size: 11px; }
@@ -516,7 +3310,6 @@ a { color: inherit; text-decoration: none; }
   margin-left: 2px;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-
 .pg-controls { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
 .pg-input { background: transparent; border: 1px solid var(--line); padding: 4px 8px; font-size: 12px; color: var(--ink); flex: 1; font-family: var(--mono); }
 .pg-input:focus { outline: 0; border-color: var(--accent); }
@@ -527,7 +3320,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 11px; color: var(--ink-2);
   white-space: pre-wrap;
 }
-
 /* ---------- CASES ---------- */
 .cases { display: flex; flex-direction: column; border: 1px solid var(--line-2); }
 .case + .case { border-top: 1px solid var(--line-2); }
@@ -544,13 +3336,11 @@ a { color: inherit; text-decoration: none; }
 }
 .case-head:hover { background: var(--bg-2); }
 .case.open .case-head { background: var(--bg-2); border-bottom: 1px solid var(--line); }
-
 .case-head-l { display: flex; flex-direction: column; gap: 6px; }
 .case-id { font-size: 10px; letter-spacing: 0.2em; color: var(--muted-2); }
 .case-client { font-family: var(--mono); font-size: 22px; font-weight: 500; letter-spacing: -0.01em; }
 [data-typepair="serif-mono"] .case-client { font-family: var(--serif); font-weight: 400; font-size: 26px; }
 .case-summary { color: var(--muted); font-size: 13px; max-width: 60ch; }
-
 .case-head-r { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; min-width: 220px; }
 .case-meta-line { display: flex; gap: 6px; font-size: 12px; color: var(--ink-2); }
 .case-toggle {
@@ -560,7 +3350,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent);
   letter-spacing: 0.05em;
 }
-
 .case-body {
   display: grid;
   grid-template-rows: 0fr;
@@ -575,20 +3364,16 @@ a { color: inherit; text-decoration: none; }
   gap: 32px 48px;
 }
 .case.open .case-inner { padding: 32px; }
-
 .case-block { display: flex; flex-direction: column; gap: 12px; }
 .cb-l { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--muted-2); letter-spacing: 0.18em; text-transform: uppercase; }
 .cb-rule { flex: 1; height: 1px; background: var(--line); }
-
 .case-p { color: var(--ink-2); font-size: 13px; margin: 0; max-width: 60ch; line-height: 1.6; }
 .case-block:has(.case-actions),
 .case-block:has(.case-results) { grid-column: 1 / -1; }
-
 .case-actions { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
 .case-actions li { display: flex; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-2); }
 .case-actions li:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
 .ca-n { color: var(--muted-2); font-size: 11px; min-width: 24px; }
-
 .case-results { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line-2); }
 .case-stat { padding: 20px; border-right: 1px solid var(--line); }
 .case-stat:last-child { border-right: 0; }
@@ -602,7 +3387,6 @@ a { color: inherit; text-decoration: none; }
 }
 .cs-suf { font-size: 0.6em; color: var(--accent); }
 .cs-label { color: var(--ink-2); font-size: 11px; max-width: 22ch; }
-
 /* ---------- EXPERIENCE ---------- */
 .exp { list-style: none; padding: 0; margin: 0 0 32px; border-top: 1px solid var(--line-2); }
 .exp-row {
@@ -622,7 +3406,6 @@ a { color: inherit; text-decoration: none; }
 .exp-r { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
 .exp-r li { font-size: 13px; color: var(--ink-2); padding-left: 14px; position: relative; }
 .exp-r li::before { content: '—'; position: absolute; left: 0; color: var(--muted-2); }
-
 /* ---------- recos ---------- */
 .recos { margin-top: 64px; }
 .recos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line-2); }
@@ -644,14 +3427,12 @@ a { color: inherit; text-decoration: none; }
 .reco figcaption { display: flex; flex-direction: column; gap: 2px; padding-top: 12px; border-top: 1px solid var(--line); }
 .reco-name { font-size: 13px; color: var(--ink); }
 .reco-role { font-size: 11px; color: var(--muted); }
-
 /* ---------- ABOUT ---------- */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line-2); margin-bottom: 48px; }
 .about-block { padding: 24px; border-right: 1px solid var(--line); }
 .about-block:last-child { border-right: 0; }
 .ab-l { font-size: 11px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 12px; }
 .about-block p { margin: 0; color: var(--ink-2); font-size: 14px; max-width: 50ch; line-height: 1.55; }
-
 .principles { padding: 0; }
 .principles ul { list-style: none; padding: 0; margin: 0; }
 .principles li {
@@ -667,7 +3448,6 @@ a { color: inherit; text-decoration: none; }
 .p-num { color: var(--muted-2); font-size: 11px; letter-spacing: 0.15em; }
 .p-k { color: var(--ink); }
 .p-v { color: var(--muted); }
-
 /* ---------- CONTACT ---------- */
 .contact { display: flex; flex-direction: column; gap: 32px; max-width: 800px; }
 .contact-sub { color: var(--muted); margin: 0; font-size: 14px; max-width: 60ch; }
@@ -689,7 +3469,6 @@ a { color: inherit; text-decoration: none; }
 .contact-row.is-link:hover .cr-v { color: var(--accent); }
 .cr-arrow { font-size: 14px; color: var(--muted-2); transition: transform 0.2s; }
 .contact-row.is-link:hover .cr-arrow { color: var(--accent); transform: translate(2px, -2px); }
-
 .contact-avail {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 8px 14px;
@@ -700,7 +3479,6 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.05em;
 }
 .ca-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 1.6s infinite; }
-
 .signoff { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
 .signoff > div:first-child {
   font-family: var(--mono);
@@ -711,7 +3489,6 @@ a { color: inherit; text-decoration: none; }
 }
 [data-typepair="serif-mono"] .signoff > div:first-child { font-family: var(--serif); font-style: italic; }
 .so-sub { color: var(--muted); font-size: 13px; }
-
 /* ---------- responsive ---------- */
 @media (max-width: 1024px) {
   .hero { grid-template-columns: 1fr; }
@@ -734,7 +3511,6 @@ a { color: inherit; text-decoration: none; }
   .practice-tabs { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--line); }
   .practice-tab { border-bottom: 0; border-right: 1px solid var(--line); flex-shrink: 0; }
 }
-
 @media (max-width: 720px) {
   :root { --pad-x: 24px; --pad-y: 64px; }
   .topbar { grid-template-columns: 1fr 1fr; height: auto; padding: 12px 16px; gap: 8px; }
@@ -758,7 +3534,6 @@ a { color: inherit; text-decoration: none; }
   .portrait-callout { position: static; margin-top: 12px; }
   .dim-v { display: none; }
 }
-
 .case-detail-link {
   display: inline-flex;
   align-items: center;
@@ -776,3 +3551,696 @@ a { color: inherit; text-decoration: none; }
   background: var(--accent);
   color: var(--bg);
 }
+
+Afficher plus
+
+Processus de réflexion
+Processus de réflexion
+Je vais ajouter la fix directement dans le fichier CSS et te fournir la version corrigée à uploader.
+
+
+A exécuté une commande
+A exécuté une commande
+Attends, je dois d'abord écrire le CSS complet avant d'ajouter la fix. Je recommence proprement.
+
+
+2 fichiers créés, a exécuté une commande, lu un fichier
+2 fichiers créés, a exécuté une commande, lu un fichier
+Voilà le fichier complet avec la fix mobile intégrée.
+
+Télécharger styles.css corrigé
+
+Pour uploader sur GitHub :
+
+Repo → styles.css → ✏️ Edit
+Ctrl+A pour tout sélectionner, supprime
+Colle le contenu du fichier téléchargé
+Commit changes
+Sur mobile, seul le statut vert "Ouvert au CDI · Freelance dispo" restera visible dans la barre du bas, centré et sans les autres cellules.
+
+
+Styles
+Code · CSS 
+
+
+
+
+Claude est une IA et peut faire des erreurs. Veuillez vérifier les réponses.
+Styles · CSS
+/* Martin Molet portfolio — blueprint dark */
+:root {
+  --bg: #0B0E10;
+  --bg-2: #0F1316;
+  --ink: #E6E6E1;
+  --ink-2: #C7CCC8;
+  --muted: #6F7A7A;
+  --muted-2: #4A5354;
+  --line: #1E2528;
+  --line-2: #2A3236;
+  --accent: #7DE2D1;
+  --accent-soft: #7DE2D133;
+  --danger: #FF8A8A;
+  --good: #9DE6B6;
+  --grid: 24px;
+  --pad-y: 96px;
+  --pad-x: 64px;
+  --topbar-h: 56px;
+  --status-h: 36px;
+  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', 'IBM Plex Mono', Menlo, monospace;
+  --serif: 'Newsreader', 'Source Serif 4', Georgia, serif;
+}
+:root[data-density="compact"] {
+  --pad-y: 64px;
+  --pad-x: 48px;
+}
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+html { font-family: var(--mono); font-size: 14px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+body { overflow-x: hidden; }
+button { font: inherit; color: inherit; background: transparent; border: 0; padding: 0; cursor: pointer; }
+input { font: inherit; }
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--accent); color: #0B0E10; }
+/* ---------- stage / blueprint ---------- */
+.stage {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: var(--grid) var(--grid);
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 30%, transparent 100%);
+  opacity: 0.55;
+}
+.cross-h, .cross-v {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  background: var(--accent);
+  opacity: 0.10;
+  mix-blend-mode: screen;
+}
+.cross-h { left: 0; right: 0; height: 1px; }
+.cross-v { top: 0; bottom: 0; width: 1px; }
+/* ---------- topbar ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--topbar-h);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(11, 14, 16, 0.85);
+  backdrop-filter: blur(10px);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+.tb-l, .tb-r { display: flex; align-items: center; gap: 16px; }
+.tb-r { justify-content: flex-end; }
+.logo { display: flex; align-items: center; gap: 10px; white-space: nowrap; min-width: 0; }
+.logo-mark { color: var(--accent); letter-spacing: -0.1em; }
+.logo-name { font-weight: 600; letter-spacing: 0.05em; }
+.logo-role { color: var(--muted); overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 1180px) { .logo-role { display: none; } }
+@media (max-width: 1080px) {
+  .navlink .navnum { display: none; }
+  .navlink { padding: 8px 10px; }
+}
+.tb-c { display: flex; gap: 0; }
+.navlink {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 8px 12px;
+  color: var(--muted);
+  border-left: 1px solid transparent;
+  transition: color 0.15s;
+  position: relative;
+}
+.navlink:first-child { border-left-color: var(--line); }
+.navlink { border-right: 1px solid var(--line); }
+.navlink .navnum { font-size: 10px; color: var(--muted-2); }
+.navlink:hover { color: var(--ink); }
+.navlink.is-active { color: var(--accent); }
+.navlink.is-active::after {
+  content: '';
+  position: absolute;
+  left: 12px; right: 12px; bottom: -1px;
+  height: 1px;
+  background: var(--accent);
+}
+.coord { display: flex; gap: 8px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lang-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--line); }
+.lang-toggle button { color: var(--muted); padding: 0; }
+.lang-toggle button.on { color: var(--accent); }
+/* ---------- status bar ---------- */
+.statusbar {
+  position: sticky;
+  bottom: 0;
+  z-index: 50;
+  height: var(--status-h);
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  background: rgba(11, 14, 16, 0.9);
+  backdrop-filter: blur(10px);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0 16px;
+}
+.sb-cell { display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; border-right: 1px solid var(--line); height: 100%; }
+.sb-cell:first-child { padding-left: 0; }
+.sb-cell.flex-1 { flex: 1; border-right: 0; }
+.sb-cell.right { justify-content: flex-end; }
+.sb-k { color: var(--muted-2); }
+.status-pill { display: inline-flex; align-items: center; gap: 6px; color: var(--good); }
+.status-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--good); animation: pulse 1.6s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+/* ---------- sheet ---------- */
+.sheets { position: relative; z-index: 2; }
+.sheet {
+  position: relative;
+  padding: var(--pad-y) var(--pad-x);
+  border-bottom: 1px solid var(--line);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.sheet::before, .sheet::after {
+  content: '';
+  position: absolute;
+  width: 12px; height: 12px;
+  border: 1px solid var(--line-2);
+}
+.sheet::before { top: 16px; left: 16px; border-right: 0; border-bottom: 0; }
+.sheet::after { bottom: 16px; right: 16px; border-left: 0; border-top: 0; }
+.sh { margin-bottom: 48px; }
+.sh-kicker {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 24px;
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+}
+.sh-title {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+}
+[data-typepair="serif-mono"] .sh-title,
+[data-typepair="serif-mono"] .hero-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.sh-sub {
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 0;
+  font-size: 14px;
+}
+.sh-sm .sh-title { font-size: clamp(20px, 2.4vw, 32px); }
+.sh-sm { margin-top: 80px; margin-bottom: 32px; }
+/* ---------- HERO ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.hero-title {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: clamp(36px, 5.4vw, 76px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+.hero-line {
+  display: inline-block;
+  animation: rise 0.7s cubic-bezier(.2,.7,.2,1) backwards;
+}
+.hero-line:nth-child(1) { animation-delay: 0.05s; }
+.hero-line:nth-child(2) { animation-delay: 0.15s; color: var(--accent); }
+.hero-line:nth-child(3) { animation-delay: 0.25s; }
+@keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.hero-sub { color: var(--muted); max-width: 50ch; font-size: 15px; margin: 0 0 32px; }
+.hero-cta { display: flex; gap: 12px; margin-bottom: 48px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid var(--line-2);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  transition: all 0.15s;
+}
+.btn-arrow { transition: transform 0.2s; }
+.btn:hover .btn-arrow { transform: translate(2px, -2px); }
+.btn-primary { background: var(--accent); color: #0B0E10; border-color: var(--accent); }
+.btn-primary:hover { box-shadow: 0 0 0 4px var(--accent-soft); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.hero-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 600px; }
+.hero-meta > div { display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-top: 1px solid var(--line); }
+.hero-meta .k { font-size: 10px; color: var(--muted-2); letter-spacing: 0.18em; }
+/* portrait */
+.hero-r { display: flex; justify-content: flex-end; }
+.portrait { position: relative; width: 100%; max-width: 360px; }
+.portrait-frame {
+  position: relative;
+  aspect-ratio: 720 / 1080;
+  border: 1px solid var(--line-2);
+  overflow: visible;
+  background: var(--bg-2);
+}
+.portrait-frame img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(1) contrast(1.1) brightness(0.95);
+}
+.portrait-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent 0, transparent 23px, rgba(125, 226, 209, 0.03) 23px, rgba(125, 226, 209, 0.03) 24px);
+  pointer-events: none;
+}
+.corner { position: absolute; width: 12px; height: 12px; border: 1px solid var(--accent); }
+.corner.tl { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+.corner.tr { top: -1px; right: -1px; border-left: 0; border-bottom: 0; }
+.corner.bl { bottom: -1px; left: -1px; border-right: 0; border-top: 0; }
+.corner.br { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+.dim-h, .dim-v {
+  position: absolute;
+  color: var(--muted-2);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  display: flex; align-items: center; gap: 4px;
+}
+.dim-h { top: -22px; left: 0; right: 0; justify-content: center; }
+.dim-h::before, .dim-h::after { content: ''; flex: 1; height: 1px; background: var(--line-2); }
+.dim-v { right: -28px; top: 0; bottom: 0; flex-direction: column; }
+.dim-v::before, .dim-v::after { content: ''; flex: 1; width: 1px; background: var(--line-2); }
+.dim-v span { writing-mode: vertical-rl; }
+.portrait-callout {
+  position: absolute;
+  bottom: -40px; left: -40px;
+  display: flex; gap: 8px;
+  font-size: 11px;
+  color: var(--muted);
+  padding: 8px 10px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+.ca-num { color: var(--accent); }
+/* ---------- metrics ---------- */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 64px;
+  border-top: 1px solid var(--line-2);
+  border-bottom: 1px solid var(--line-2);
+}
+.metric {
+  padding: 32px 28px;
+  border-right: 1px solid var(--line);
+  position: relative;
+}
+.metric:last-child { border-right: 0; }
+.metric-id { font-size: 10px; color: var(--muted-2); letter-spacing: 0.2em; margin-bottom: 16px; }
+.metric-value { display: flex; align-items: baseline; gap: 4px; margin-bottom: 16px; }
+.mv-num {
+  font-family: var(--mono);
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+}
+.mv-suffix { font-size: 32px; color: var(--accent); font-weight: 400; }
+.metric-label { font-size: 13px; color: var(--ink-2); margin-bottom: 8px; max-width: 26ch; }
+.metric-note { font-size: 11px; color: var(--muted); max-width: 32ch; }
+/* ---------- WORK ---------- */
+.practice-wrap {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  border: 1px solid var(--line-2);
+  margin-bottom: 64px;
+}
+.practice-tabs { display: flex; flex-direction: column; border-right: 1px solid var(--line); background: var(--bg-2); }
+.practice-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  position: relative;
+  transition: color 0.15s, background 0.15s;
+}
+.practice-tab:last-child { border-bottom: 0; }
+.practice-tab:hover { color: var(--ink); }
+.practice-tab.on { color: var(--ink); background: var(--bg); }
+.practice-tab.on::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 2px; background: var(--accent);
+}
+.pt-tag { font-size: 10px; color: var(--muted-2); width: 14px; }
+.practice-tab.on .pt-tag { color: var(--accent); }
+.pt-title { flex: 1; font-size: 13px; }
+.pt-arrow { font-size: 10px; color: var(--muted-2); }
+.practice-tab.on .pt-arrow { color: var(--accent); }
+.practice-pane { padding: 32px 32px; animation: fade 0.4s; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.pp-head { margin-bottom: 32px; }
+.pp-tag { font-size: 10px; color: var(--muted-2); letter-spacing: 0.2em; }
+.pp-title { font-size: 28px; font-weight: 500; margin: 8px 0 12px; letter-spacing: -0.02em; }
+.pp-one { color: var(--accent); font-size: 14px; margin: 0; }
+[data-typepair="serif-mono"] .pp-title { font-family: var(--serif); font-weight: 400; }
+.pp-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; }
+.col-h { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 11px; color: var(--muted-2); text-transform: uppercase; letter-spacing: 0.18em; }
+.col-rule { flex: 1; height: 1px; background: var(--line); }
+.method { list-style: none; padding: 0; margin: 0; }
+.method li {
+  display: flex; gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.method li:last-child { border-bottom: 1px solid var(--line); }
+.m-num { color: var(--muted-2); font-size: 11px; min-width: 24px; padding-top: 2px; }
+.proof { list-style: none; padding: 0; margin: 0 0 24px; }
+.proof li { padding: 12px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1.5fr; gap: 16px; }
+.proof li:last-child { border-bottom: 1px solid var(--line); }
+.proof-k { color: var(--accent); font-size: 13px; }
+.proof-v { color: var(--ink-2); font-size: 13px; }
+/* ---------- live token switcher / proof widgets ---------- */
+.ts {
+  border: 1px solid var(--line-2);
+  background: var(--bg);
+  margin-top: 24px;
+}
+.ts-h { display: flex; justify-content: space-between; padding: 8px 12px; border-bottom: 1px solid var(--line); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.ts-h-r { color: var(--accent); }
+.ts-controls { display: flex; flex-direction: column; gap: 0; padding: 0; }
+.ts-controls .seg { padding: 8px 12px; border-bottom: 1px solid var(--line); }
+.seg { display: flex; align-items: center; gap: 12px; }
+.seg-l { font-size: 11px; color: var(--muted); width: 80px; letter-spacing: 0.1em; text-transform: uppercase; }
+.seg-r { display: flex; gap: 0; border: 1px solid var(--line); }
+.seg-r button { padding: 4px 10px; font-size: 11px; color: var(--muted); border-right: 1px solid var(--line); }
+.seg-r button:last-child { border-right: 0; }
+.seg-r button:hover { color: var(--ink); }
+.seg-r button.on { background: var(--accent); color: #0B0E10; }
+.ts-preview { padding: 16px; border-top: 1px solid var(--line); transition: background 0.3s, color 0.3s; }
+.ts-card { padding: var(--pad, 14px); border: 1px solid currentColor; border-color: rgba(127,127,127,0.3); transition: padding 0.2s; }
+.ts-row { display: flex; gap: 6px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+.ts-h-card { font-size: 18px; margin-bottom: 6px; letter-spacing: -0.01em; }
+.ts-body { font-size: 12px; max-width: 50ch; margin-bottom: 12px; }
+.ts-actions { display: flex; gap: 8px; }
+.ts-btn { padding: 6px 12px; border: 1px solid; font-size: 11px; letter-spacing: 0.05em; background: transparent; cursor: pointer; }
+/* ops */
+.ops-grid { padding: 14px; display: grid; gap: 10px; }
+.ops-row { display: grid; grid-template-columns: 80px 1fr 50px; align-items: center; gap: 12px; font-size: 12px; }
+.ops-l { color: var(--muted); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.ops-track { height: 8px; border: 1px solid var(--line); position: relative; }
+.ops-fill { height: 100%; background: var(--accent); transition: width 0.6s; }
+.ops-fill.bad { background: var(--danger); }
+.ops-v { text-align: right; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+/* code */
+.code {
+  margin: 0; padding: 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-2);
+  overflow-x: auto;
+  background: transparent;
+}
+/* workshops */
+.ws { list-style: none; padding: 0; margin: 0; }
+.ws li { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.ws li:last-child { border-bottom: 0; }
+.ws-tick { color: var(--accent); }
+.ws-id { margin-left: auto; color: var(--muted-2); font-size: 10px; letter-spacing: 0.1em; }
+/* ---------- CASES ---------- */
+.cases { display: flex; flex-direction: column; border: 1px solid var(--line-2); }
+.case + .case { border-top: 1px solid var(--line-2); }
+.case-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 32px;
+  padding: 28px 32px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.case-head:hover { background: var(--bg-2); }
+.case.open .case-head { background: var(--bg-2); border-bottom: 1px solid var(--line); }
+.case-head-l { display: flex; flex-direction: column; gap: 6px; }
+.case-id { font-size: 10px; letter-spacing: 0.2em; color: var(--muted-2); }
+.case-client { font-family: var(--mono); font-size: 22px; font-weight: 500; letter-spacing: -0.01em; }
+[data-typepair="serif-mono"] .case-client { font-family: var(--serif); font-weight: 400; font-size: 26px; }
+.case-summary { color: var(--muted); font-size: 13px; max-width: 60ch; }
+.case-head-r { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; min-width: 220px; }
+.case-meta-line { display: flex; gap: 6px; font-size: 12px; color: var(--ink-2); }
+.case-toggle {
+  font-size: 11px;
+  padding: 4px 10px;
+  border: 1px solid var(--line-2);
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+.case-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s ease;
+}
+.case.open .case-body { grid-template-rows: 1fr; }
+.case-inner {
+  overflow: hidden;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 48px;
+}
+.case.open .case-inner { padding: 32px; }
+.case-block { display: flex; flex-direction: column; gap: 12px; }
+.cb-l { display: flex; align-items: center; gap: 10px; font-size: 11px; color: var(--muted-2); letter-spacing: 0.18em; text-transform: uppercase; }
+.cb-rule { flex: 1; height: 1px; background: var(--line); }
+.case-p { color: var(--ink-2); font-size: 13px; margin: 0; max-width: 60ch; line-height: 1.6; }
+.case-block:has(.case-actions),
+.case-block:has(.case-results) { grid-column: 1 / -1; }
+.case-actions { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
+.case-actions li { display: flex; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-2); }
+.case-actions li:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
+.ca-n { color: var(--muted-2); font-size: 11px; min-width: 24px; }
+.case-results { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line-2); }
+.case-stat { padding: 20px; border-right: 1px solid var(--line); }
+.case-stat:last-child { border-right: 0; }
+.cs-num {
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 500; letter-spacing: -0.03em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.cs-suf { font-size: 0.6em; color: var(--accent); }
+.cs-label { color: var(--ink-2); font-size: 11px; max-width: 22ch; }
+/* ---------- EXPERIENCE ---------- */
+.exp { list-style: none; padding: 0; margin: 0 0 32px; border-top: 1px solid var(--line-2); }
+.exp-row {
+  display: grid;
+  grid-template-columns: 200px 1.2fr 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line-2);
+  align-items: start;
+}
+.exp-l { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+.exp-period { color: var(--accent); }
+.exp-c { display: flex; flex-direction: column; gap: 6px; }
+.exp-org { font-family: var(--mono); font-size: 22px; font-weight: 500; letter-spacing: -0.01em; }
+[data-typepair="serif-mono"] .exp-org { font-family: var(--serif); font-weight: 400; font-size: 24px; }
+.exp-role { color: var(--muted); font-size: 13px; }
+.exp-r { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.exp-r li { font-size: 13px; color: var(--ink-2); padding-left: 14px; position: relative; }
+.exp-r li::before { content: '—'; position: absolute; left: 0; color: var(--muted-2); }
+/* ---------- recos ---------- */
+.recos { margin-top: 64px; }
+.recos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line-2); }
+.reco { padding: 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.reco:nth-child(3n) { border-right: 0; }
+.reco:nth-last-child(-n+3) { border-bottom: 0; }
+.reco-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.reco-id { font-size: 10px; color: var(--muted-2); letter-spacing: 0.2em; }
+.reco-ctx { font-size: 10px; color: var(--accent); letter-spacing: 0.05em; text-align: right; }
+.reco blockquote {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  font-family: var(--mono);
+  flex: 1;
+}
+[data-typepair="serif-mono"] .reco blockquote { font-family: var(--serif); font-size: 16px; line-height: 1.45; }
+.reco figcaption { display: flex; flex-direction: column; gap: 2px; padding-top: 12px; border-top: 1px solid var(--line); }
+.reco-name { font-size: 13px; color: var(--ink); }
+.reco-role { font-size: 11px; color: var(--muted); }
+/* ---------- ABOUT ---------- */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line-2); margin-bottom: 48px; }
+.about-block { padding: 24px; border-right: 1px solid var(--line); }
+.about-block:last-child { border-right: 0; }
+.ab-l { font-size: 11px; color: var(--accent); letter-spacing: 0.2em; margin-bottom: 12px; }
+.about-block p { margin: 0; color: var(--ink-2); font-size: 14px; max-width: 50ch; line-height: 1.55; }
+.principles { padding: 0; }
+.principles ul { list-style: none; padding: 0; margin: 0; }
+.principles li {
+  display: grid;
+  grid-template-columns: 80px 220px 1fr;
+  gap: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  align-items: baseline;
+}
+.principles li:last-child { border-bottom: 1px solid var(--line); }
+.p-num { color: var(--muted-2); font-size: 11px; letter-spacing: 0.15em; }
+.p-k { color: var(--ink); }
+.p-v { color: var(--muted); }
+/* ---------- CONTACT ---------- */
+.contact { display: flex; flex-direction: column; gap: 32px; max-width: 800px; }
+.contact-sub { color: var(--muted); margin: 0; font-size: 14px; max-width: 60ch; }
+.contact-grid { display: flex; flex-direction: column; border: 1px solid var(--line-2); }
+.contact-row {
+  display: grid;
+  grid-template-columns: 80px 140px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 16px 20px;
+  border-top: 1px solid var(--line);
+  transition: background 0.15s, color 0.15s;
+}
+.contact-row:first-child { border-top: 0; }
+.contact-row.is-link:hover { background: var(--bg-2); color: var(--accent); }
+.cr-id { font-size: 10px; color: var(--muted-2); letter-spacing: 0.2em; }
+.cr-k { font-size: 12px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.cr-v { font-size: 14px; color: var(--ink); }
+.contact-row.is-link:hover .cr-v { color: var(--accent); }
+.cr-arrow { font-size: 14px; color: var(--muted-2); transition: transform 0.2s; }
+.contact-row.is-link:hover .cr-arrow { color: var(--accent); transform: translate(2px, -2px); }
+.contact-avail {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 14px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 12px;
+  align-self: flex-start;
+  letter-spacing: 0.05em;
+}
+.ca-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 1.6s infinite; }
+.signoff { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
+.signoff > div:first-child {
+  font-family: var(--mono);
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+[data-typepair="serif-mono"] .signoff > div:first-child { font-family: var(--serif); font-style: italic; }
+.so-sub { color: var(--muted); font-size: 13px; }
+/* ---------- responsive ---------- */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-r { justify-content: flex-start; }
+  .pp-grid { grid-template-columns: 1fr; gap: 32px; }
+  .pg-body { grid-template-columns: 1fr; }
+  .pg-stage { border-right: 0; border-bottom: 1px solid var(--line); }
+  .case-results { grid-template-columns: repeat(2, 1fr); }
+  .case-stat:nth-child(2) { border-right: 0; }
+  .case-stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .recos-grid { grid-template-columns: 1fr; }
+  .reco, .reco:nth-child(3n) { border-right: 0; border-bottom: 1px solid var(--line); }
+  .reco:last-child { border-bottom: 0; }
+  .reco:nth-last-child(-n+3) { border-bottom: 1px solid var(--line); }
+  .reco:last-child { border-bottom: 0; }
+  .exp-row { grid-template-columns: 1fr; gap: 12px; }
+  .principles li { grid-template-columns: 60px 1fr; }
+  .principles li .p-v { grid-column: 1 / -1; padding-left: 60px; }
+  .practice-wrap { grid-template-columns: 1fr; }
+  .practice-tabs { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .practice-tab { border-bottom: 0; border-right: 1px solid var(--line); flex-shrink: 0; }
+}
+@media (max-width: 720px) {
+  :root { --pad-x: 24px; --pad-y: 64px; }
+  .topbar { grid-template-columns: 1fr 1fr; height: auto; padding: 12px 16px; gap: 8px; }
+  .tb-c { display: none; }
+  .logo-role { display: none; }
+  .metrics { grid-template-columns: 1fr; }
+  .metric { border-right: 0; border-bottom: 1px solid var(--line); }
+  .case-head { grid-template-columns: 1fr; }
+  .case-head-r { align-items: flex-start; }
+  .case-actions { grid-template-columns: 1fr; }
+  .case-actions li:nth-last-child(-n+2) { border-bottom: 0; }
+  .case-actions li:last-child { border-bottom: 1px solid var(--line); }
+  .case-results { grid-template-columns: 1fr; }
+  .case-stat { border-right: 0; border-bottom: 1px solid var(--line); }
+  .case-stat:last-child { border-bottom: 0; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-block { border-right: 0; border-bottom: 1px solid var(--line); }
+  .about-block:last-child { border-bottom: 0; }
+  .contact-row { grid-template-columns: 1fr auto; gap: 4px; }
+  .cr-id, .cr-k { display: none; }
+  .portrait-callout { position: static; margin-top: 12px; }
+  .dim-v { display: none; }
+  /* statusbar mobile : status uniquement */
+  .statusbar .sb-cell:not(.flex-1) { display: none; }
+  .statusbar .sb-cell.flex-1 { justify-content: center; padding: 0 16px; border: 0; }
+}
+.case-detail-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 200px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 8px 16px;
+  transition: background 0.15s, color 0.15s;
+}
+.case-detail-link:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+ 
+
