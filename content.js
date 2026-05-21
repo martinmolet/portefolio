@@ -1,5 +1,4 @@
 // Bilingual content store — Martin Molet, real CV.
-
 const CONTENT = {
   en: {
     nav: ['Index', 'Practices', 'Case studies', 'Experience', 'Contact'],
@@ -614,5 +613,4 @@ const CONTENT = {
     },
   },
 };
-
 window.CONTENT = CONTENT;
